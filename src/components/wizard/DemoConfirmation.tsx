@@ -84,11 +84,11 @@ export function DemoConfirmation({ formData, onReset, onExploreMore }: DemoConfi
       </div>
 
       {/* Action Buttons */}
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
         <button
           type="button"
           onClick={onReset}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active text-white font-semibold text-sm rounded-xl shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal min-h-[48px] cursor-pointer"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-bold text-sm rounded-xl shadow-lg shadow-teal-900/30 hover:shadow-xl hover:shadow-teal-500/30 border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[48px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
         >
           <RotateCcw className="w-4 h-4" aria-hidden="true" />
           <span>Start another demo request</span>
@@ -97,7 +97,7 @@ export function DemoConfirmation({ formData, onReset, onExploreMore }: DemoConfi
         <button
           type="button"
           onClick={onExploreMore}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-brand-offwhite text-brand-navy font-semibold text-sm rounded-xl border border-slate-300 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal min-h-[48px] cursor-pointer"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm rounded-xl border border-slate-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[48px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
         >
           <span>Return to homepage overview</span>
           <ArrowRight className="w-4 h-4" aria-hidden="true" />

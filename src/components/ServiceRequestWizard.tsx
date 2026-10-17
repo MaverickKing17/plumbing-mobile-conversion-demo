@@ -252,12 +252,12 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
               </div>
 
               {/* Navigation Controls */}
-              <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between gap-4">
+              <div className="mt-8 pt-6 border-t border-slate-200/80 flex items-center justify-between gap-4">
                 {currentStep > 1 ? (
                   <button
                     type="button"
                     onClick={handleBack}
-                    className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 bg-brand-offwhite hover:bg-slate-200 text-brand-navy font-semibold text-sm rounded-xl border border-slate-300 transition-colors min-h-[44px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+                    className="inline-flex items-center gap-2 px-5 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm rounded-xl border border-slate-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[46px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
                   >
                     <ArrowLeft className="w-4 h-4" aria-hidden="true" />
                     <span>Back</span>
@@ -270,17 +270,17 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="inline-flex items-center gap-2 px-7 py-3 bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active text-white font-semibold text-sm rounded-xl shadow-md hover:shadow-lg transition-all min-h-[44px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
+                    className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-bold text-base rounded-xl shadow-lg shadow-teal-900/30 hover:shadow-xl hover:shadow-teal-500/30 border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[48px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
                   >
                     <span>Continue</span>
-                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                    <ArrowRight className="w-4 h-4 text-teal-200 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                   </button>
                 ) : (
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active text-white font-semibold text-sm sm:text-base rounded-xl shadow-lg hover:shadow-xl transition-all min-h-[48px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
+                    className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-extrabold text-base rounded-xl shadow-xl shadow-teal-900/40 hover:shadow-2xl hover:shadow-teal-500/30 border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[50px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
                   >
-                    <CheckCircle2 className="w-5 h-5" aria-hidden="true" />
+                    <CheckCircle2 className="w-5 h-5 text-teal-200" aria-hidden="true" />
                     <span>Confirm Demo Submission</span>
                   </button>
                 )}

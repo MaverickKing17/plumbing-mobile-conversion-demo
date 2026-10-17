@@ -29,54 +29,54 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
               In this design concept, homeowners have direct access to clear request pathways without getting trapped in endless voicemail menus or automated telemarketing bots.
             </p>
 
-            {/* Clearly Labelled Sample Contact Cards: Deep navy panels (#102A43) */}
+            {/* Clearly Labelled Sample Contact Cards: Elevated panels with glowing icon badges */}
             <div className="space-y-4 mb-8">
-              <div className="p-4.5 rounded-xl border border-slate-700 bg-brand-navy flex items-start gap-3.5 shadow-lg">
-                <div className="w-10 h-10 rounded-lg bg-teal-950/80 text-brand-teal-bright border border-teal-700/60 flex items-center justify-center shrink-0">
-                  <Phone className="w-4 h-4" aria-hidden="true" />
+              <div className="group p-5 rounded-2xl border-2 border-slate-700/90 bg-slate-900/95 flex items-start gap-4 shadow-xl hover:border-teal-400/50 transition-all duration-200 hover:-translate-y-0.5">
+                <div className="w-12 h-12 rounded-2xl bg-teal-950/90 text-brand-teal-bright border-2 border-teal-400/50 flex items-center justify-center shrink-0 shadow-lg shadow-teal-950/50 group-hover:scale-105 transition-transform">
+                  <Phone className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold text-white">Sample Phone Line</span>
-                    <span className="text-[10px] font-semibold text-amber-300 bg-amber-950/80 border border-amber-700/70 px-2 py-0.5 rounded">
+                    <span className="text-sm font-bold text-white">Sample Phone Line</span>
+                    <span className="text-[10px] font-bold text-amber-300 bg-amber-950/80 border border-amber-600/70 px-2 py-0.5 rounded-md shadow-xs">
                       Demo Placeholder
                     </span>
                   </div>
-                  <p className="text-sm font-mono text-white font-medium mt-1">(555) 019-2834</p>
-                  <p className="text-xs text-brand-muted mt-1">
+                  <p className="text-base font-mono text-white font-bold mt-1 tracking-wide">(555) 019-2834</p>
+                  <p className="text-xs text-slate-300 mt-1">
                     Non-operational fictional demonstration number.
                   </p>
                 </div>
               </div>
 
-              <div className="p-4.5 rounded-xl border border-slate-700 bg-brand-navy flex items-start gap-3.5 shadow-lg">
-                <div className="w-10 h-10 rounded-lg bg-teal-950/80 text-brand-teal-bright border border-teal-700/60 flex items-center justify-center shrink-0">
-                  <Mail className="w-4 h-4" aria-hidden="true" />
+              <div className="group p-5 rounded-2xl border-2 border-slate-700/90 bg-slate-900/95 flex items-start gap-4 shadow-xl hover:border-teal-400/50 transition-all duration-200 hover:-translate-y-0.5">
+                <div className="w-12 h-12 rounded-2xl bg-teal-950/90 text-brand-teal-bright border-2 border-teal-400/50 flex items-center justify-center shrink-0 shadow-lg shadow-teal-950/50 group-hover:scale-105 transition-transform">
+                  <Mail className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-bold text-white">Sample Inquiries Inbox</span>
-                    <span className="text-[10px] font-semibold text-amber-300 bg-amber-950/80 border border-amber-700/70 px-2 py-0.5 rounded">
+                    <span className="text-sm font-bold text-white">Sample Inquiries Inbox</span>
+                    <span className="text-[10px] font-bold text-amber-300 bg-amber-950/80 border border-amber-600/70 px-2 py-0.5 rounded-md shadow-xs">
                       Demo Placeholder
                     </span>
                   </div>
-                  <p className="text-sm font-mono text-white font-medium mt-1">
+                  <p className="text-sm font-mono text-white font-semibold mt-1">
                     requests@northstar-plumbing.demo
                   </p>
-                  <p className="text-xs text-brand-muted mt-1">
+                  <p className="text-xs text-slate-300 mt-1">
                     Non-operational fictional demonstration mailbox.
                   </p>
                 </div>
               </div>
 
-              <div className="p-4.5 rounded-xl border border-slate-700 bg-brand-navy flex items-start gap-3.5 shadow-lg">
-                <div className="w-10 h-10 rounded-lg bg-teal-950/80 text-brand-teal-bright border border-teal-700/60 flex items-center justify-center shrink-0">
-                  <Clock className="w-4 h-4" aria-hidden="true" />
+              <div className="group p-5 rounded-2xl border-2 border-slate-700/90 bg-slate-900/95 flex items-start gap-4 shadow-xl hover:border-teal-400/50 transition-all duration-200 hover:-translate-y-0.5">
+                <div className="w-12 h-12 rounded-2xl bg-teal-950/90 text-brand-teal-bright border-2 border-teal-400/50 flex items-center justify-center shrink-0 shadow-lg shadow-teal-950/50 group-hover:scale-105 transition-transform">
+                  <Clock className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-white">Standard Service Hours (Concept)</span>
-                  <p className="text-sm text-white font-medium mt-1">Monday to Friday: 8:00 AM – 5:00 PM EST</p>
-                  <p className="text-xs text-brand-muted mt-0.5">
+                  <span className="text-sm font-bold text-white">Standard Service Hours (Concept)</span>
+                  <p className="text-sm text-white font-semibold mt-1">Monday to Friday: 8:00 AM – 5:00 PM EST</p>
+                  <p className="text-xs text-slate-300 mt-0.5">
                     Requests submitted outside hours are queued for next-business-day review.
                   </p>
                 </div>
@@ -87,37 +87,40 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
               <button
                 type="button"
                 onClick={onRequestClick}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active text-white font-semibold text-sm rounded-xl shadow-lg transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright min-h-[44px] cursor-pointer"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-bold text-base rounded-2xl shadow-xl shadow-teal-950/80 hover:shadow-teal-500/30 hover:shadow-2xl border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright min-h-[50px] cursor-pointer"
               >
                 <span>Open Service Request Form</span>
-                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                <ArrowRight className="w-5 h-5 text-teal-200 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
               </button>
             </div>
           </div>
 
           {/* Right Column: GTA Service Coverage Area */}
-          <div className="bg-brand-navy rounded-2xl border border-slate-700 p-6 sm:p-8 shadow-xl">
+          <div className="bg-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-7 sm:p-9 shadow-2xl relative overflow-hidden">
+            {/* Top ambient highlight line */}
+            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/60 to-transparent opacity-60" />
+
             <div className="flex items-center gap-2 text-brand-teal-bright font-bold text-sm mb-2">
               <MapPin className="w-4 h-4" aria-hidden="true" />
               <span>Service Area Context</span>
             </div>
-            <h3 className="text-lg font-bold text-white mb-3">
+            <h3 className="text-xl font-bold text-white mb-3">
               Greater Toronto Area (GTA) Prototype Focus
             </h3>
-            <p className="text-xs sm:text-sm text-brand-muted leading-relaxed mb-6">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
               Small plumbing contractors thrive when customer location is gathered early to confirm travel radius before scheduling:
             </p>
 
             <ul className="space-y-3 text-xs sm:text-sm">
               {GTA_SERVICE_AREAS.map((area, idx) => (
-                <li key={idx} className="flex items-start gap-3 bg-brand-darkblue p-3.5 rounded-xl border border-slate-700/90 shadow-sm">
-                  <span className="w-2 h-2 rounded-full bg-brand-teal-bright shrink-0 mt-1.5" aria-hidden="true" />
-                  <span className="text-slate-100 font-medium">{area}</span>
+                <li key={idx} className="flex items-start gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 shadow-sm hover:border-teal-400/40 transition-colors">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-teal-bright shrink-0 mt-1.5 shadow-xs" aria-hidden="true" />
+                  <span className="text-white font-semibold">{area}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-6 pt-5 border-t border-slate-800 text-xs text-brand-muted leading-relaxed">
+            <div className="mt-6 pt-5 border-t border-slate-800 text-xs text-slate-400 leading-relaxed">
               <strong className="text-white">Demo note:</strong> In a production implementation, Google Maps Place Autocomplete or postal code geofencing can be integrated to automatically determine travel fees and dispatch boundaries.
             </div>
           </div>

@@ -72,14 +72,14 @@ export function StepIssueDetails({
         </div>
 
         {/* Quick select buttons for mobile speed */}
-        <div className="mt-2.5 flex flex-wrap items-center gap-1.5" id="location-hint">
-          <span className="text-xs text-brand-slate-light mr-1">Quick fill:</span>
+        <div className="mt-2.5 flex flex-wrap items-center gap-2" id="location-hint">
+          <span className="text-xs font-semibold text-slate-500 mr-0.5">Quick fill:</span>
           {COMMON_GTA_MUNICIPALITIES.slice(0, 5).map((city) => (
             <button
               key={city}
               type="button"
               onClick={() => onChangeLocation(city)}
-              className="text-xs bg-brand-offwhite hover:bg-teal-50 text-brand-slate hover:text-brand-teal border border-slate-200/90 font-medium px-2.5 py-1 rounded-md transition-colors cursor-pointer min-h-[30px]"
+              className="text-xs bg-slate-100 hover:bg-teal-100 text-slate-800 hover:text-teal-900 border border-slate-300 hover:border-teal-400 font-bold px-3 py-1 rounded-lg transition-all duration-150 shadow-2xs hover:-translate-y-0.5 cursor-pointer min-h-[32px]"
             >
               {city}
             </button>
@@ -134,27 +134,27 @@ export function StepIssueDetails({
         <legend className="text-sm font-semibold text-brand-navy mb-2">
           Preferred Contact Method <span className="text-red-600" aria-hidden="true">*</span>
         </legend>
-        <div className="grid grid-cols-2 gap-3" role="radiogroup" aria-label="Preferred contact method">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5" role="radiogroup" aria-label="Preferred contact method">
           <button
             type="button"
             role="radio"
             aria-checked={contactMethod === 'phone'}
             onClick={() => onChangeContactMethod('phone')}
-            className={`p-3.5 rounded-xl border text-left transition-all flex items-center gap-3 cursor-pointer min-h-[48px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal ${
+            className={`p-4 rounded-2xl border-2 text-left transition-all duration-200 flex items-center gap-3.5 cursor-pointer min-h-[52px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal hover:-translate-y-0.5 ${
               contactMethod === 'phone'
-                ? 'border-brand-teal bg-teal-50/60 shadow-2xs ring-1 ring-brand-teal/40'
-                : 'border-slate-300 bg-white hover:border-slate-400'
+                ? 'border-teal-500 bg-teal-50/80 shadow-md ring-2 ring-teal-500/20'
+                : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 shadow-2xs'
             }`}
           >
             <div
-              className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
-                contactMethod === 'phone' ? 'bg-brand-teal text-white' : 'bg-slate-100 text-brand-slate'
+              className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                contactMethod === 'phone' ? 'bg-teal-500 text-white shadow-xs' : 'bg-slate-100 text-slate-700'
               }`}
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-brand-navy">Phone Call / SMS</p>
+              <p className="text-sm font-bold text-brand-navy">Phone Call / SMS</p>
               <p className="text-xs text-brand-slate-light">Direct phone callback</p>
             </div>
           </button>
@@ -164,21 +164,21 @@ export function StepIssueDetails({
             role="radio"
             aria-checked={contactMethod === 'email'}
             onClick={() => onChangeContactMethod('email')}
-            className={`p-3.5 rounded-xl border text-left transition-all flex items-center gap-3 cursor-pointer min-h-[48px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal ${
+            className={`p-4 rounded-2xl border-2 text-left transition-all duration-200 flex items-center gap-3.5 cursor-pointer min-h-[52px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal hover:-translate-y-0.5 ${
               contactMethod === 'email'
-                ? 'border-brand-teal bg-teal-50/60 shadow-2xs ring-1 ring-brand-teal/40'
-                : 'border-slate-300 bg-white hover:border-slate-400'
+                ? 'border-teal-500 bg-teal-50/80 shadow-md ring-2 ring-teal-500/20'
+                : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 shadow-2xs'
             }`}
           >
             <div
-              className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
-                contactMethod === 'email' ? 'bg-brand-teal text-white' : 'bg-slate-100 text-brand-slate'
+              className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                contactMethod === 'email' ? 'bg-teal-500 text-white shadow-xs' : 'bg-slate-100 text-slate-700'
               }`}
             >
               <Mail className="w-4 h-4" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-brand-navy">Email Reply</p>
+              <p className="text-sm font-bold text-brand-navy">Email Reply</p>
               <p className="text-xs text-brand-slate-light">Written estimation notes</p>
             </div>
           </button>

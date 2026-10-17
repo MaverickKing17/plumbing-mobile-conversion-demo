@@ -10,28 +10,28 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
     switch (id) {
       case 'drain-cleaning':
         return (
-          <div className="w-12 h-12 rounded-xl bg-teal-950/70 border border-teal-700/60 flex items-center justify-center mb-5 text-brand-teal-bright shadow-sm">
-            <Droplets className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-950 to-teal-900/80 border-2 border-teal-400/50 flex items-center justify-center mb-6 text-brand-teal-bright shadow-lg shadow-teal-950/60 group-hover:scale-105 transition-transform">
+            <Droplets className="w-7 h-7 stroke-[2.2]" aria-hidden="true" />
           </div>
         );
       case 'leak-repair':
         return (
-          <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-600 flex items-center justify-center mb-5 text-teal-300 shadow-sm">
-            <Wrench className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-teal-400/40 flex items-center justify-center mb-6 text-brand-teal-bright shadow-lg shadow-slate-950/60 group-hover:scale-105 transition-transform">
+            <Wrench className="w-7 h-7 stroke-[2.2]" aria-hidden="true" />
           </div>
         );
       case 'water-heater':
         return (
           /* Warm amber accent detail on heating icon */
-          <div className="w-12 h-12 rounded-xl bg-amber-950/60 border border-amber-700/70 flex items-center justify-center mb-5 text-brand-amber shadow-sm">
-            <Flame className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-950 to-amber-900/80 border-2 border-amber-400/50 flex items-center justify-center mb-6 text-amber-400 shadow-lg shadow-amber-950/60 group-hover:scale-105 transition-transform">
+            <Flame className="w-7 h-7 stroke-[2.2]" aria-hidden="true" />
           </div>
         );
       case 'other':
       default:
         return (
-          <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-brand-teal-bright">
-            <PlusCircle className="w-5 h-5 stroke-[2]" aria-hidden="true" />
+          <div className="w-12 h-12 rounded-2xl bg-slate-800 border-2 border-slate-600 flex items-center justify-center text-brand-teal-bright shadow-md">
+            <PlusCircle className="w-6 h-6 stroke-[2]" aria-hidden="true" />
           </div>
         );
     }
@@ -60,27 +60,35 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
         </div>
 
         {/* Responsive Grid for Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {SERVICE_OPTIONS.slice(0, 3).map((service) => (
             <article
               key={service.id}
-              className="bg-brand-navy rounded-2xl border border-slate-700/90 p-6 sm:p-7 flex flex-col justify-between shadow-xl hover:border-brand-teal-bright/60 hover:shadow-2xl transition-all focus-within:ring-2 focus-within:ring-brand-teal-bright"
+              className="group bg-gradient-to-b from-slate-900/95 via-[#13283c]/95 to-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-7 sm:p-8 flex flex-col justify-between shadow-2xl hover:border-teal-400/60 hover:shadow-teal-950/60 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden focus-within:ring-2 focus-within:ring-brand-teal-bright"
             >
+              {/* Subtle top ambient glow line */}
+              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/60 to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
+
               <div>
                 {getIcon(service.id)}
-                <h3 className="text-lg font-bold text-white mb-2">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-teal-200 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed mb-5">
+                <p className="text-sm text-slate-300 leading-relaxed mb-6">
                   {service.shortDescription}
                 </p>
 
-                {/* Light content surface for readable common examples */}
-                <div className="mb-6 bg-brand-offwhite rounded-xl p-3.5 border border-slate-200/90 shadow-inner">
-                  <p className="text-xs font-bold text-slate-900 mb-2">Common examples:</p>
-                  <ul className="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                {/* Polished contrast panel for common examples */}
+                <div className="mb-6 bg-slate-950/60 rounded-2xl p-4 border border-slate-800 shadow-inner">
+                  <p className="text-xs font-bold uppercase tracking-wider text-brand-teal-bright mb-2.5">
+                    Common Examples:
+                  </p>
+                  <ul className="text-xs text-slate-200 space-y-2 list-none p-0">
                     {service.commonExamples.map((example, idx) => (
-                      <li key={idx} className="leading-normal">{example}</li>
+                      <li key={idx} className="flex items-start gap-2 leading-normal">
+                        <span className="w-1.5 h-1.5 rounded-full bg-teal-400 mt-1.5 shrink-0" aria-hidden="true" />
+                        <span>{example}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
@@ -91,10 +99,10 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
                   type="button"
                   onClick={() => onSelectService(service.id)}
                   aria-label={`Request ${service.title.toLowerCase()} service`}
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active text-white font-semibold text-sm rounded-xl transition-all shadow-md hover:shadow-teal-950/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy min-h-[44px] cursor-pointer"
+                  className="group/btn w-full inline-flex items-center justify-center gap-2.5 px-5 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-bold text-sm tracking-wide rounded-xl shadow-lg shadow-teal-950/70 hover:shadow-teal-500/30 hover:shadow-xl border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 min-h-[48px] cursor-pointer"
                 >
                   <span>Request this service</span>
-                  <ArrowRight className="w-4 h-4 text-brand-teal-border" aria-hidden="true" />
+                  <ArrowRight className="w-4 h-4 text-teal-200 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
                 </button>
               </div>
             </article>
@@ -102,12 +110,12 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
         </div>
 
         {/* 4th Service Option: General / Other */}
-        <div className="mt-8 bg-brand-navy rounded-2xl border border-slate-700/90 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-xl">
+        <div className="mt-8 bg-gradient-to-r from-slate-900/95 via-[#13283c] to-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
           <div className="flex items-start sm:items-center gap-4">
             {getIcon('other')}
             <div>
-              <h3 className="text-base font-bold text-white">Have a different plumbing requirement?</h3>
-              <p className="text-xs sm:text-sm text-brand-muted">
+              <h3 className="text-lg font-bold text-white mb-1">Have a different plumbing requirement?</h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                 Fixtures, main shutoff valves, supply lines, or general residential inspections across the GTA.
               </p>
             </div>
@@ -116,10 +124,10 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
             type="button"
             onClick={() => onSelectService('other')}
             aria-label="Request custom or other plumbing service"
-            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-brand-darkblue hover:bg-brand-navy-light text-brand-teal-bright hover:text-white font-semibold text-sm rounded-xl border border-slate-600 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright min-h-[44px] shrink-0 cursor-pointer w-full sm:w-auto"
+            className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm rounded-xl border-2 border-teal-400/50 hover:border-teal-400 shadow-md hover:shadow-teal-900/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright min-h-[46px] shrink-0 cursor-pointer w-full sm:w-auto"
           >
             <span>Request other service</span>
-            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            <ArrowRight className="w-4 h-4 text-teal-300 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </button>
         </div>
       </div>

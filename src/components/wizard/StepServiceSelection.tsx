@@ -68,16 +68,18 @@ export function StepServiceSelection({
                   onSelect(option.id);
                 }
               }}
-              className={`p-4 rounded-xl border transition-all cursor-pointer text-left relative flex flex-col justify-between min-h-[110px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal ${
+              className={`p-4.5 rounded-2xl border-2 transition-all duration-200 cursor-pointer text-left relative flex flex-col justify-between min-h-[115px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal hover:-translate-y-0.5 ${
                 isSelected
-                  ? 'border-brand-teal bg-teal-50/50 shadow-2xs ring-1 ring-brand-teal/40'
-                  : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-brand-offwhite'
+                  ? 'border-teal-500 bg-teal-50/80 shadow-md ring-2 ring-teal-500/20'
+                  : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 shadow-2xs'
               }`}
             >
               <div>
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-lg bg-slate-100/90 flex items-center justify-center shrink-0">
+                    <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+                      isSelected ? 'bg-teal-100 text-teal-800' : 'bg-slate-100/90'
+                    }`}>
                       {getIcon(option.id)}
                     </div>
                     <span className="font-bold text-sm sm:text-base text-brand-navy">
@@ -87,9 +89,9 @@ export function StepServiceSelection({
 
                   {/* Radio Visual Indicator */}
                   <div
-                    className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 transition-colors ${
+                    className={`w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors ${
                       isSelected
-                        ? 'border-brand-teal bg-brand-teal text-white'
+                        ? 'border-teal-500 bg-teal-500 text-white shadow-xs'
                         : 'border-slate-300 bg-white'
                     }`}
                     aria-hidden="true"

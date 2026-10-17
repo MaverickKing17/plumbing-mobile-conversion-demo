@@ -59,7 +59,7 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
             type="button"
             onClick={() => onEditStep(1)}
             aria-label="Edit selected service"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-teal hover:text-brand-teal-hover bg-teal-50 hover:bg-teal-100/70 border border-teal-200/70 rounded-lg transition-colors cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-teal-800 bg-teal-100 hover:bg-teal-200 border border-teal-300 rounded-lg shadow-2xs transition-all duration-150 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
           >
             <Pencil className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Edit</span>
@@ -90,7 +90,7 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
             type="button"
             onClick={() => onEditStep(2)}
             aria-label="Edit location and issue description"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-teal hover:text-brand-teal-hover bg-teal-50 hover:bg-teal-100/70 border border-teal-200/70 rounded-lg transition-colors cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-teal-800 bg-teal-100 hover:bg-teal-200 border border-teal-300 rounded-lg shadow-2xs transition-all duration-150 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
           >
             <Pencil className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Edit</span>
@@ -123,7 +123,7 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
             type="button"
             onClick={() => onEditStep(3)}
             aria-label="Edit contact details"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-teal hover:text-brand-teal-hover bg-teal-50 hover:bg-teal-100/70 border border-teal-200/70 rounded-lg transition-colors cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-teal-800 bg-teal-100 hover:bg-teal-200 border border-teal-300 rounded-lg shadow-2xs transition-all duration-150 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
           >
             <Pencil className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Edit</span>

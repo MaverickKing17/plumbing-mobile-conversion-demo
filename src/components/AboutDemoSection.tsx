@@ -25,72 +25,110 @@ export function AboutDemoSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* Improvement 1 Card */}
-          <div className="bg-brand-darkblue rounded-2xl border border-slate-700/90 p-6 sm:p-8 shadow-xl hover:border-slate-600 transition-colors">
-            <div className="w-11 h-11 rounded-xl bg-teal-950/90 border border-teal-700/60 text-brand-teal-bright flex items-center justify-center mb-5 shadow-sm">
-              <Zap className="w-5 h-5" aria-hidden="true" />
+          <div className="group bg-gradient-to-b from-slate-900/95 via-[#13283c]/95 to-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-7 sm:p-9 shadow-2xl hover:border-teal-400/60 hover:shadow-teal-950/50 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
+            {/* Ambient top light line */}
+            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/70 to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
+
+            <div>
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <div className="w-13 h-13 rounded-2xl bg-teal-950/90 border-2 border-teal-400/50 text-brand-teal-bright flex items-center justify-center shadow-lg shadow-teal-950/60 group-hover:scale-105 transition-transform">
+                  <Zap className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
+                </div>
+                <span className="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal-950/80 border border-teal-400/40 text-brand-teal-bright shadow-sm">
+                  Mobile Speed &amp; UX
+                </span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight mb-3">
+                Improvement 1: Faster, Clearer Mobile Experience
+              </h3>
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                Homeowners dealing with a plumbing problem are often on a smartphone under stress. Heavy images, intrusive popups, and vague copy cause high bounce rates.
+              </p>
+
+              <ul className="space-y-3 text-xs sm:text-sm text-slate-200">
+                <li className="flex items-start gap-3 bg-slate-950/50 p-3.5 rounded-xl border border-slate-800/80">
+                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
+                  </span>
+                  <span><strong>Zero bloated dependencies:</strong> Native system font stack renders instantly with zero layout shifts.</span>
+                </li>
+                <li className="flex items-start gap-3 bg-slate-950/50 p-3.5 rounded-xl border border-slate-800/80">
+                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
+                  </span>
+                  <span><strong>Immediate visual hierarchy:</strong> Headline, core offerings, and action visible without endless scrolling.</span>
+                </li>
+                <li className="flex items-start gap-3 bg-slate-950/50 p-3.5 rounded-xl border border-slate-800/80">
+                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
+                  </span>
+                  <span><strong>Honest, credible messaging:</strong> Transparent GTA service scope without fabricated emergency claims.</span>
+                </li>
+              </ul>
             </div>
-            <h3 className="text-lg font-bold text-white mb-2.5">
-              Improvement 1: Faster, Clearer Mobile Experience
-            </h3>
-            <p className="text-xs sm:text-sm text-brand-muted leading-relaxed mb-5">
-              Homeowners dealing with a plumbing problem are often on a smartphone under stress. Heavy images, intrusive popups, and vague copy cause high bounce rates.
-            </p>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-brand-teal-bright shrink-0 mt-0.5" aria-hidden="true" />
-                <span>Zero bloated dependencies or slow font downloads — system font stack renders instantly.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-brand-teal-bright shrink-0 mt-0.5" aria-hidden="true" />
-                <span>Immediate visual hierarchy: headline, core offerings, and action visible without endless scrolling.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-brand-teal-bright shrink-0 mt-0.5" aria-hidden="true" />
-                <span>Honest, credible messaging without fabricated 24/7 or emergency claims.</span>
-              </li>
-            </ul>
           </div>
 
           {/* Improvement 2 Card */}
-          <div className="bg-brand-darkblue rounded-2xl border border-slate-700/90 p-6 sm:p-8 shadow-xl hover:border-slate-600 transition-colors">
-            <div className="w-11 h-11 rounded-xl bg-slate-800 border border-slate-600 text-teal-300 flex items-center justify-center mb-5 shadow-sm">
-              <Accessibility className="w-5 h-5" aria-hidden="true" />
+          <div className="group bg-gradient-to-b from-slate-900/95 via-[#13283c]/95 to-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-7 sm:p-9 shadow-2xl hover:border-teal-400/60 hover:shadow-teal-950/50 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
+            {/* Ambient top light line */}
+            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/70 to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
+
+            <div>
+              <div className="flex items-center justify-between gap-4 mb-6">
+                <div className="w-13 h-13 rounded-2xl bg-teal-950/90 border-2 border-teal-400/50 text-brand-teal-bright flex items-center justify-center shadow-lg shadow-teal-950/60 group-hover:scale-105 transition-transform">
+                  <Accessibility className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
+                </div>
+                <span className="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal-950/80 border border-teal-400/40 text-brand-teal-bright shadow-sm">
+                  Accessibility &amp; Flow
+                </span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight mb-3">
+                Improvement 2: Accessible 4-Step Intake Flow
+              </h3>
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                Replaces cluttered generic contact forms with an intuitive, guided intake that structures incoming homeowner requests before a phone call is even placed.
+              </p>
+
+              <ul className="space-y-3 text-xs sm:text-sm text-slate-200">
+                <li className="flex items-start gap-3 bg-slate-950/50 p-3.5 rounded-xl border border-slate-800/80">
+                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
+                  </span>
+                  <span><strong>WCAG 2.2 AA compliant:</strong> Explicit labels, ARIA live step announcements, and full keyboard navigation.</span>
+                </li>
+                <li className="flex items-start gap-3 bg-slate-950/50 p-3.5 rounded-xl border border-slate-800/80">
+                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
+                  </span>
+                  <span><strong>Contextual intake:</strong> Captures location and problem summary cleanly without invasive personal data harvesting.</span>
+                </li>
+                <li className="flex items-start gap-3 bg-slate-950/50 p-3.5 rounded-xl border border-slate-800/80">
+                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
+                  </span>
+                  <span><strong>Editable review summary:</strong> Homeowners can verify their details and return to any step before confirming.</span>
+                </li>
+              </ul>
             </div>
-            <h3 className="text-lg font-bold text-white mb-2.5">
-              Improvement 2: Accessible 4-Step Service Request Flow
-            </h3>
-            <p className="text-xs sm:text-sm text-brand-muted leading-relaxed mb-5">
-              Replaces cluttered generic contact forms with an intuitive, guided intake that structures incoming homeowner requests before a phone call is even placed.
-            </p>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-brand-teal-bright shrink-0 mt-0.5" aria-hidden="true" />
-                <span>WCAG 2.2 AA compliant: explicit form labels, ARIA live step announcements, and keyboard navigability.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-brand-teal-bright shrink-0 mt-0.5" aria-hidden="true" />
-                <span>Contextual inputs: requests location and problem summary without invasive personal data collection.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-brand-teal-bright shrink-0 mt-0.5" aria-hidden="true" />
-                <span>Editable review step so customers verify their details before committing.</span>
-              </li>
-            </ul>
           </div>
         </div>
 
         {/* Privacy & Performance Guarantee */}
-        <div className="mt-8 bg-brand-darkblue rounded-2xl border border-slate-700/90 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xl">
-          <div className="flex items-start sm:items-center gap-3">
-            <ShieldCheck className="w-6 h-6 text-brand-teal-bright shrink-0" aria-hidden="true" />
+        <div className="mt-8 bg-gradient-to-r from-slate-900/95 via-[#13283c] to-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-2xl relative overflow-hidden">
+          <div className="flex items-start sm:items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-teal-950/90 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-md">
+              <ShieldCheck className="w-6 h-6 stroke-[2]" aria-hidden="true" />
+            </div>
             <div>
-              <p className="text-sm font-bold text-white">Privacy &amp; Performance Integrity</p>
-              <p className="text-xs text-brand-muted">
+              <p className="text-base font-bold text-white mb-0.5">Privacy &amp; Performance Integrity</p>
+              <p className="text-xs sm:text-sm text-slate-300">
                 Zero third-party tracking scripts, cookies, or persistent storage. Form data is strictly ephemeral and kept in browser memory.
               </p>
             </div>
           </div>
-          <span className="text-xs font-semibold text-brand-teal-bright bg-brand-navy border border-slate-700 px-3.5 py-1.5 rounded-lg whitespace-nowrap">
+          <span className="text-xs font-bold text-brand-teal-bright bg-teal-950/80 border-2 border-teal-500/40 px-4 py-2 rounded-xl whitespace-nowrap shadow-sm">
             Vercel Ready · Vite + React + TS
           </span>
         </div>

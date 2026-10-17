@@ -44,40 +44,50 @@ export function HowItWorks() {
           </p>
         </div>
 
-        {/* Steps Grid: Dark blue-gray panels (#1B3448) */}
+        {/* Steps Grid: Enhanced Value Proposition Cards with tactile elevation and luminous badges */}
         <ol className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 list-none p-0 mb-10">
           {steps.map((step) => (
             <li
               key={step.number}
-              className="relative bg-brand-darkblue rounded-2xl border border-slate-700/90 p-6 sm:p-7 flex flex-col justify-between shadow-xl hover:border-slate-600 transition-colors"
+              className="group relative bg-gradient-to-b from-slate-900/95 via-[#13283c]/95 to-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-7 sm:p-8 flex flex-col justify-between shadow-2xl hover:border-teal-400/60 hover:shadow-teal-950/50 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
+              {/* Top ambient highlight line */}
+              <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/60 to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
+
               <div>
-                <div className="flex items-center justify-between mb-5">
-                  <span className="w-9 h-9 rounded-full bg-teal-950/90 border border-teal-700/70 text-brand-teal-bright font-bold text-sm flex items-center justify-center shadow-sm">
+                <div className="flex items-center justify-between mb-6">
+                  <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-400 to-teal-600 text-slate-950 font-black text-lg flex items-center justify-center shadow-lg shadow-teal-500/30 group-hover:scale-105 transition-transform">
                     {step.number}
                   </span>
-                  <div className="w-9 h-9 rounded-lg bg-brand-navy border border-slate-700 flex items-center justify-center shadow-inner">
+                  <div className="w-11 h-11 rounded-xl bg-slate-800/90 border border-slate-700 text-brand-teal-bright flex items-center justify-center shadow-inner group-hover:border-teal-400/50 transition-colors">
                     {step.icon}
                   </div>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-white mb-2.5">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-teal-200 transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-brand-muted leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   {step.description}
                 </p>
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-brand-teal-bright">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-teal-bright" />
+                <span>Step {step.number} of 3</span>
               </div>
             </li>
           ))}
         </ol>
 
         {/* Demonstration Disclaimer Callout */}
-        <div className="bg-brand-darkblue/80 border border-teal-700/40 rounded-2xl p-5 flex items-start gap-3.5 shadow-md">
-          <Info className="w-5 h-5 text-brand-teal-bright shrink-0 mt-0.5" aria-hidden="true" />
+        <div className="bg-slate-900/90 border-2 border-teal-500/40 rounded-2xl p-5 sm:p-6 flex items-start gap-4 shadow-xl">
+          <div className="w-10 h-10 rounded-xl bg-teal-950/90 border border-teal-400/40 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+            <Info className="w-5 h-5" aria-hidden="true" />
+          </div>
           <div className="text-xs sm:text-sm leading-relaxed">
-            <p className="font-semibold text-white mb-0.5">Demonstration Environment Notice</p>
-            <p className="text-brand-muted">
+            <p className="font-bold text-white text-sm sm:text-base mb-1">Demonstration Environment Notice</p>
+            <p className="text-slate-300">
               This is an interactive design and engineering demonstration. Service requests completed in this workflow are kept in client memory for testing purposes and are <strong>not sent to an actual plumbing company</strong> unless a production backend is deliberately configured.
             </p>
           </div>

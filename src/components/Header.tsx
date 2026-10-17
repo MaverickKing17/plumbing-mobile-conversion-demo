@@ -103,9 +103,9 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
           <button
             type="button"
             onClick={handleRequestClick}
-            className="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active rounded-lg shadow-md hover:shadow-teal-900/30 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy min-h-[44px] cursor-pointer"
+            className="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 rounded-xl shadow-lg shadow-teal-950/70 hover:shadow-teal-500/30 border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy min-h-[44px] cursor-pointer"
           >
-            Request Service
+            <span>Request Service</span>
           </button>
 
           {/* Mobile hamburger button */}
@@ -180,7 +180,7 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
             <button
               type="button"
               onClick={handleRequestClick}
-              className="w-full flex items-center justify-center px-4 py-3 text-base font-semibold text-white bg-brand-teal hover:bg-brand-teal-hover rounded-lg shadow-md min-h-[48px]"
+              className="w-full flex items-center justify-center px-5 py-3.5 text-base font-bold text-white bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:to-teal-500 rounded-xl shadow-lg shadow-teal-950/70 border border-teal-300/40 min-h-[48px]"
             >
               Request Service
             </button>
