@@ -71,7 +71,7 @@ export function StepServiceSelection({
               className={`p-4 rounded-xl border transition-all cursor-pointer text-left relative flex flex-col justify-between min-h-[110px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal ${
                 isSelected
                   ? 'border-brand-teal bg-teal-50/50 shadow-2xs ring-1 ring-brand-teal/40'
-                  : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/60'
+                  : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-brand-offwhite'
               }`}
             >
               <div>

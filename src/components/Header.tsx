@@ -92,7 +92,7 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
           <button
             type="button"
             onClick={() => handleNavClick('about-demo')}
-            className="text-slate-500 hover:text-brand-navy transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal rounded"
+            className="text-brand-slate hover:text-brand-navy transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal rounded"
           >
             About Demo
           </button>

@@ -76,7 +76,7 @@ export function ProgressIndicator({
                         ? 'bg-brand-teal text-white'
                         : isCurrent
                         ? 'bg-brand-navy text-white'
-                        : 'bg-slate-200 text-slate-600'
+                        : 'bg-slate-200 text-brand-slate'
                     }`}
                     aria-hidden="true"
                   >

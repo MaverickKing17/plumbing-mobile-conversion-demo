@@ -97,7 +97,7 @@ export function DemoConfirmation({ formData, onReset, onExploreMore }: DemoConfi
         <button
           type="button"
           onClick={onExploreMore}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-slate-50 text-brand-navy font-semibold text-sm rounded-xl border border-slate-300 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal min-h-[48px] cursor-pointer"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white hover:bg-brand-offwhite text-brand-navy font-semibold text-sm rounded-xl border border-slate-300 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal min-h-[48px] cursor-pointer"
         >
           <span>Return to homepage overview</span>
           <ArrowRight className="w-4 h-4" aria-hidden="true" />

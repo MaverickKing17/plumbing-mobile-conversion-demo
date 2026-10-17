@@ -17,6 +17,23 @@
   --color-brand-slate-dark: #334E68;
 }
 
+:root {
+  --color-brand-navy: #102A43;
+  --color-brand-navy-dark: #0B1D30;
+  --color-brand-navy-light: #243B53;
+  --color-brand-teal: #0D9488;
+  --color-brand-teal-hover: #0F766E;
+  --color-brand-teal-active: #115E59;
+  --color-brand-teal-light: #F0FDFA;
+  --color-brand-teal-border: #99F6E4;
+  --color-brand-offwhite: #F5F7FA;
+  --color-brand-amber: #F59E0B;
+  --color-brand-amber-light: #FFFBEB;
+  --color-brand-slate: #475569;
+  --color-brand-slate-light: #627D98;
+  --color-brand-slate-dark: #334E68;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

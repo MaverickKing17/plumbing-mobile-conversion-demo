@@ -46,7 +46,7 @@ export function HeroSection({ onRequestService, onExploreServices }: HeroSection
               <button
                 type="button"
                 onClick={onExploreServices}
-                className="inline-flex items-center justify-center px-6 py-3.5 bg-white hover:bg-slate-50 text-brand-navy font-semibold text-base rounded-xl border border-slate-300 shadow-2xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 min-h-[48px] cursor-pointer"
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-white hover:bg-brand-offwhite text-brand-navy font-semibold text-base rounded-xl border border-slate-300 shadow-2xs transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 min-h-[48px] cursor-pointer"
               >
                 Explore Services
               </button>
