@@ -37,7 +37,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-brand-offwhite text-brand-slate font-sans">
+    <div className="min-h-screen flex flex-col bg-brand-navy text-slate-100 font-sans selection:bg-brand-teal selection:text-white">
       {/* Accessible skip link for keyboard users */}
       <SkipLink />
 

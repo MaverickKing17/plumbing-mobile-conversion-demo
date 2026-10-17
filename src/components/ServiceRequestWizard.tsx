@@ -119,32 +119,35 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
   return (
     <section
       id="request-service"
-      className="py-12 sm:py-16 md:py-20 bg-brand-offwhite border-b border-slate-200"
+      className="py-14 sm:py-20 md:py-24 bg-gradient-to-b from-brand-darkblue to-brand-navy border-b border-slate-800 relative"
       aria-labelledby="wizard-main-heading"
     >
-      <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        {/* Section Heading */}
-        <div className="text-center max-w-xl mx-auto mb-8 sm:mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-teal block mb-1">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+        {/* Section Heading on Dark Background */}
+        <div className="text-center max-w-xl mx-auto mb-8 sm:mb-12">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-teal-bright block mb-2">
             Service Request Flow Demo
           </span>
           <h2
             id="wizard-main-heading"
             ref={headingRef}
             tabIndex={-1}
-            className="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight focus:outline-none"
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight focus:outline-none"
           >
             {isSubmitted ? 'Demo Request Completed' : 'Request Plumbing Help'}
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-brand-slate leading-relaxed">
+          <p className="mt-2 text-xs sm:text-sm text-brand-muted leading-relaxed">
             {isSubmitted
               ? 'Thank you for testing the Northstar Plumbing Co. service-request workflow.'
               : 'Complete this quick 4-step intake. You can review and edit all details before confirming.'}
           </p>
         </div>
 
-        {/* Wizard Main Card in Pure White */}
-        <div className="bg-white rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-10 shadow-sm">
+        {/* Visually Distinct High-Contrast Panel Against Dark Background */}
+        <div className="bg-white rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-10 shadow-2xl text-slate-900">
           {isSubmitted ? (
             <DemoConfirmation
               formData={formData}
@@ -254,7 +257,7 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
                   <button
                     type="button"
                     onClick={handleBack}
-                    className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 bg-brand-offwhite hover:bg-slate-200 text-brand-navy font-semibold text-sm rounded-xl border border-slate-200/80 transition-colors min-h-[44px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+                    className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 bg-brand-offwhite hover:bg-slate-200 text-brand-navy font-semibold text-sm rounded-xl border border-slate-300 transition-colors min-h-[44px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
                   >
                     <ArrowLeft className="w-4 h-4" aria-hidden="true" />
                     <span>Back</span>
@@ -267,7 +270,7 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active text-white font-semibold text-sm rounded-xl shadow-sm hover:shadow transition-all min-h-[44px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
+                    className="inline-flex items-center gap-2 px-7 py-3 bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active text-white font-semibold text-sm rounded-xl shadow-md hover:shadow-lg transition-all min-h-[44px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
                   >
                     <span>Continue</span>
                     <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -275,7 +278,7 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
                 ) : (
                   <button
                     type="submit"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active text-white font-semibold text-sm sm:text-base rounded-xl shadow-sm hover:shadow-md transition-all min-h-[48px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active text-white font-semibold text-sm sm:text-base rounded-xl shadow-lg hover:shadow-xl transition-all min-h-[48px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
                   >
                     <CheckCircle2 className="w-5 h-5" aria-hidden="true" />
                     <span>Confirm Demo Submission</span>
