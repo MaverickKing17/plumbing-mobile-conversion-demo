@@ -1,0 +1,6 @@
+{
+  "name": "Northstar Plumbing Demo",
+  "description": "A high-performance, mobile-first plumbing website and accessible service-request demo for the Greater Toronto Area.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
