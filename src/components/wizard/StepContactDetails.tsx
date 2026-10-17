@@ -31,20 +31,20 @@ export function StepContactDetails({
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-1">
+        <h2 className="text-lg sm:text-xl font-bold text-brand-navy mb-1">
           3. Contact details
         </h2>
-        <p className="text-xs sm:text-sm text-slate-600">
+        <p className="text-xs sm:text-sm text-brand-slate">
           We only ask for the specific contact method you chose ({contactMethod === 'phone' ? 'Phone' : 'Email'}).
         </p>
       </div>
 
-      {/* Demo Privacy Banner */}
-      <div className="bg-amber-50/80 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
-        <ShieldAlert className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" aria-hidden="true" />
-        <div className="text-xs text-amber-900 leading-relaxed">
+      {/* Demo Privacy Banner using Warm Amber Accent */}
+      <div className="bg-amber-50/70 border border-amber-200/90 rounded-xl p-4 flex items-start gap-3">
+        <ShieldAlert className="w-5 h-5 text-brand-amber shrink-0 mt-0.5" aria-hidden="true" />
+        <div className="text-xs text-amber-950 leading-relaxed">
           <p className="font-semibold text-amber-950 mb-0.5">Demo Mode · Sample Data Notice</p>
-          <p>
+          <p className="text-amber-900/90">
             This demo runs in-memory. <strong>No real plumbing business will contact you</strong>. You are encouraged to enter fictional test details (e.g., <em>Alex Demo</em>, <em>(416) 555-0142</em>, or <em>test@example.com</em>).
           </p>
         </div>
@@ -54,12 +54,12 @@ export function StepContactDetails({
       <div>
         <label
           htmlFor="contact-name"
-          className="block text-sm font-semibold text-slate-900 mb-1.5"
+          className="block text-sm font-semibold text-brand-navy mb-1.5"
         >
           Full Name <span className="text-red-600" aria-hidden="true">*</span>
         </label>
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+          <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-teal">
             <User className="w-4 h-4" aria-hidden="true" />
           </div>
           <input
@@ -72,7 +72,7 @@ export function StepContactDetails({
             aria-required="true"
             aria-invalid={!!errors.fullName}
             aria-describedby={errors.fullName ? 'name-error' : undefined}
-            className={`w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-slate-900 transition-colors placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 min-h-[44px] ${
+            className={`w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-brand-navy transition-colors placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal min-h-[44px] ${
               errors.fullName
                 ? 'border-red-400 bg-red-50/30'
                 : 'border-slate-300 bg-white hover:border-slate-400'
@@ -91,12 +91,12 @@ export function StepContactDetails({
         <div>
           <label
             htmlFor="contact-phone"
-            className="block text-sm font-semibold text-slate-900 mb-1.5"
+            className="block text-sm font-semibold text-brand-navy mb-1.5"
           >
             Sample Phone Number <span className="text-red-600" aria-hidden="true">*</span>
           </label>
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-teal">
               <Phone className="w-4 h-4" aria-hidden="true" />
             </div>
             <input
@@ -109,14 +109,14 @@ export function StepContactDetails({
               aria-required="true"
               aria-invalid={!!errors.phoneNumber}
               aria-describedby={`phone-hint ${errors.phoneNumber ? 'phone-error' : ''}`}
-              className={`w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-slate-900 transition-colors placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 min-h-[44px] ${
+              className={`w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-brand-navy transition-colors placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal min-h-[44px] ${
                 errors.phoneNumber
                   ? 'border-red-400 bg-red-50/30'
                   : 'border-slate-300 bg-white hover:border-slate-400'
               }`}
             />
           </div>
-          <p id="phone-hint" className="mt-1 text-xs text-slate-500">
+          <p id="phone-hint" className="mt-1 text-xs text-brand-slate-light">
             Standard 10-digit Canadian / North American format.
           </p>
           {errors.phoneNumber && (
@@ -132,12 +132,12 @@ export function StepContactDetails({
         <div>
           <label
             htmlFor="contact-email"
-            className="block text-sm font-semibold text-slate-900 mb-1.5"
+            className="block text-sm font-semibold text-brand-navy mb-1.5"
           >
             Sample Email Address <span className="text-red-600" aria-hidden="true">*</span>
           </label>
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-teal">
               <Mail className="w-4 h-4" aria-hidden="true" />
             </div>
             <input
@@ -150,14 +150,14 @@ export function StepContactDetails({
               aria-required="true"
               aria-invalid={!!errors.emailAddress}
               aria-describedby={`email-hint ${errors.emailAddress ? 'email-error' : ''}`}
-              className={`w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-slate-900 transition-colors placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 min-h-[44px] ${
+              className={`w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-brand-navy transition-colors placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal min-h-[44px] ${
                 errors.emailAddress
                   ? 'border-red-400 bg-red-50/30'
-                  : 'border-slate-300 bg-white hover:border-slate-400'
+                : 'border-slate-300 bg-white hover:border-slate-400'
               }`}
             />
           </div>
-          <p id="email-hint" className="mt-1 text-xs text-slate-500">
+          <p id="email-hint" className="mt-1 text-xs text-brand-slate-light">
             A valid test email address for demonstration purposes.
           </p>
           {errors.emailAddress && (

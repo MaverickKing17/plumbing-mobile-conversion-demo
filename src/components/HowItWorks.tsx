@@ -6,19 +6,19 @@ export function HowItWorks() {
       number: '1',
       title: 'Choose the service you need',
       description: 'Select from drain cleaning, leak repair, water heater replacement, or describe another plumbing issue.',
-      icon: <CheckSquare className="w-5 h-5 text-blue-700" aria-hidden="true" />,
+      icon: <CheckSquare className="w-5 h-5 text-brand-teal" aria-hidden="true" />,
     },
     {
       number: '2',
       title: 'Describe the issue and your location',
       description: 'Provide your GTA city or municipality, a brief description of the problem, and how you prefer to be reached.',
-      icon: <FileText className="w-5 h-5 text-blue-700" aria-hidden="true" />,
+      icon: <FileText className="w-5 h-5 text-brand-teal" aria-hidden="true" />,
     },
     {
       number: '3',
       title: 'Review and submit your request',
       description: 'Check your information on the summary screen and submit. You can go back and edit any step at any point.',
-      icon: <ClipboardCheck className="w-5 h-5 text-blue-700" aria-hidden="true" />,
+      icon: <ClipboardCheck className="w-5 h-5 text-brand-teal" aria-hidden="true" />,
     },
   ];
 
@@ -30,13 +30,16 @@ export function HowItWorks() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-2xl mb-8 sm:mb-12">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand-teal block mb-1">
+            Intuitive Booking Flow
+          </span>
           <h2
             id="how-it-works-heading"
-            className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-3"
+            className="text-2xl sm:text-3xl font-bold text-brand-navy tracking-tight mb-3"
           >
             How It Works
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-brand-slate text-sm sm:text-base leading-relaxed">
             A simple 3-step intake process designed to eliminate confusion and help customers request service in under two minutes.
           </p>
         </div>
@@ -46,22 +49,22 @@ export function HowItWorks() {
           {steps.map((step) => (
             <li
               key={step.number}
-              className="relative bg-slate-50 rounded-2xl border border-slate-200 p-6 flex flex-col justify-between"
+              className="relative bg-brand-offwhite rounded-2xl border border-slate-200 p-6 flex flex-col justify-between shadow-2xs hover:border-slate-300 transition-colors"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="w-9 h-9 rounded-full bg-blue-100 text-blue-800 font-bold text-sm flex items-center justify-center">
+                  <span className="w-9 h-9 rounded-full bg-teal-50 border border-teal-200/80 text-brand-teal font-bold text-sm flex items-center justify-center">
                     {step.number}
                   </span>
-                  <div className="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center">
+                  <div className="w-9 h-9 rounded-lg bg-white border border-slate-200 flex items-center justify-center shadow-2xs">
                     {step.icon}
                   </div>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-2">
+                <h3 className="text-base sm:text-lg font-bold text-brand-navy mb-2">
                   {step.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-brand-slate leading-relaxed">
                   {step.description}
                 </p>
               </div>
@@ -70,11 +73,11 @@ export function HowItWorks() {
         </ol>
 
         {/* Demonstration Disclaimer Callout */}
-        <div className="bg-sky-50 border border-sky-200 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 text-sky-950">
-          <Info className="w-5 h-5 text-sky-700 shrink-0 mt-0.5" aria-hidden="true" />
+        <div className="bg-teal-50/40 border border-brand-teal/20 rounded-2xl p-4 sm:p-5 flex items-start gap-3.5 text-brand-navy">
+          <Info className="w-5 h-5 text-brand-teal shrink-0 mt-0.5" aria-hidden="true" />
           <div className="text-xs sm:text-sm leading-relaxed">
-            <p className="font-semibold text-sky-900 mb-0.5">Demonstration Environment Notice</p>
-            <p className="text-sky-800">
+            <p className="font-semibold text-brand-navy mb-0.5">Demonstration Environment Notice</p>
+            <p className="text-brand-slate">
               This is an interactive design and engineering demonstration. Service requests completed in this workflow are kept in client memory for testing purposes and are <strong>not sent to an actual plumbing company</strong> unless a production backend is deliberately configured.
             </p>
           </div>

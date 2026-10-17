@@ -13,10 +13,10 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-lg sm:text-xl font-bold text-slate-900 mb-1">
+        <h2 className="text-lg sm:text-xl font-bold text-brand-navy mb-1">
           4. Review your service request
         </h2>
-        <p className="text-xs sm:text-sm text-slate-600">
+        <p className="text-xs sm:text-sm text-brand-slate">
           Please check that your selections and entries look correct before confirming this demo submission.
         </p>
       </div>
@@ -45,13 +45,13 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
         {/* Section 1: Service */}
         <div className="p-4 sm:p-5 flex items-start justify-between gap-4">
           <div>
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 block mb-1">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-brand-slate-light block mb-1">
               Service Selected
             </span>
-            <p className="text-base font-bold text-slate-900">
+            <p className="text-base font-bold text-brand-navy">
               {selectedServiceObj?.title || 'None Selected'}
             </p>
-            <p className="text-xs text-slate-500 mt-0.5">
+            <p className="text-xs text-brand-slate mt-0.5">
               {selectedServiceObj?.shortDescription}
             </p>
           </div>
@@ -59,7 +59,7 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
             type="button"
             onClick={() => onEditStep(1)}
             aria-label="Edit selected service"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-blue-700 hover:text-blue-900 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-teal hover:text-brand-teal-hover bg-teal-50 hover:bg-teal-100/70 border border-teal-200/70 rounded-lg transition-colors cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
           >
             <Pencil className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Edit</span>
@@ -70,19 +70,19 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
         <div className="p-4 sm:p-5 flex items-start justify-between gap-4">
           <div className="space-y-3">
             <div>
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 block mb-1">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-brand-slate-light block mb-1">
                 GTA Municipality / Area
               </span>
-              <p className="text-sm font-semibold text-slate-800">
-                {formData.location || <span className="text-amber-600 italic">Missing</span>}
+              <p className="text-sm font-semibold text-brand-navy">
+                {formData.location || <span className="text-brand-amber italic">Missing</span>}
               </p>
             </div>
             <div>
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 block mb-1">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-brand-slate-light block mb-1">
                 Issue Description
               </span>
-              <p className="text-xs sm:text-sm text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-100 leading-relaxed whitespace-pre-wrap">
-                {formData.issueDescription || <span className="text-amber-600 italic">No description provided</span>}
+              <p className="text-xs sm:text-sm text-brand-slate bg-brand-offwhite p-3 rounded-lg border border-slate-200/80 leading-relaxed whitespace-pre-wrap">
+                {formData.issueDescription || <span className="text-brand-amber italic">No description provided</span>}
               </p>
             </div>
           </div>
@@ -90,7 +90,7 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
             type="button"
             onClick={() => onEditStep(2)}
             aria-label="Edit location and issue description"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-blue-700 hover:text-blue-900 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-teal hover:text-brand-teal-hover bg-teal-50 hover:bg-teal-100/70 border border-teal-200/70 rounded-lg transition-colors cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
           >
             <Pencil className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Edit</span>
@@ -101,21 +101,21 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
         <div className="p-4 sm:p-5 flex items-start justify-between gap-4">
           <div className="space-y-2">
             <div>
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 block mb-1">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-brand-slate-light block mb-1">
                 Contact Person
               </span>
-              <p className="text-sm font-semibold text-slate-800">
-                {formData.fullName || <span className="text-amber-600 italic">Missing name</span>}
+              <p className="text-sm font-semibold text-brand-navy">
+                {formData.fullName || <span className="text-brand-amber italic">Missing name</span>}
               </p>
             </div>
             <div>
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 block mb-1">
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-brand-slate-light block mb-1">
                 Preferred Method: {formData.contactMethod === 'phone' ? 'Phone' : 'Email'}
               </span>
-              <p className="text-sm font-mono text-slate-700">
+              <p className="text-sm font-mono text-brand-navy">
                 {formData.contactMethod === 'phone'
-                  ? formData.phoneNumber || <span className="text-amber-600 italic font-sans">Missing phone</span>
-                  : formData.emailAddress || <span className="text-amber-600 italic font-sans">Missing email</span>}
+                  ? formData.phoneNumber || <span className="text-brand-amber italic font-sans">Missing phone</span>
+                  : formData.emailAddress || <span className="text-brand-amber italic font-sans">Missing email</span>}
               </p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
             type="button"
             onClick={() => onEditStep(3)}
             aria-label="Edit contact details"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-blue-700 hover:text-blue-900 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-brand-teal hover:text-brand-teal-hover bg-teal-50 hover:bg-teal-100/70 border border-teal-200/70 rounded-lg transition-colors cursor-pointer min-h-[36px] shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
           >
             <Pencil className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Edit</span>
@@ -132,8 +132,8 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
       </div>
 
       {/* Demonstration confirmation advisory */}
-      <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-600 leading-relaxed flex items-center gap-3">
-        <CheckCircle2 className="w-5 h-5 text-blue-700 shrink-0" aria-hidden="true" />
+      <div className="p-4 bg-teal-50/40 border border-brand-teal/20 rounded-xl text-xs text-brand-slate leading-relaxed flex items-center gap-3">
+        <CheckCircle2 className="w-5 h-5 text-brand-teal shrink-0" aria-hidden="true" />
         <span>
           Submitting this form completes the demonstration walkthrough. No contractor will be notified or dispatched.
         </span>

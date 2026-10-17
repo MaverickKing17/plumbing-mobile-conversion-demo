@@ -30,18 +30,18 @@ export function ProgressIndicator({
 
       {/* Mobile Step Counter Header */}
       <div className="flex items-center justify-between sm:hidden mb-3">
-        <span className="text-xs font-semibold text-blue-700">
+        <span className="text-xs font-bold text-brand-teal uppercase tracking-wider">
           Step {currentStep} of 4
         </span>
-        <span className="text-xs font-medium text-slate-700">
+        <span className="text-xs font-semibold text-brand-navy">
           {STEP_LABELS[currentStep]}
         </span>
       </div>
 
       {/* Progress Bar Track on Mobile */}
-      <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden sm:hidden mb-6">
+      <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden sm:hidden mb-6">
         <div
-          className="bg-blue-600 h-full transition-all duration-300 ease-out"
+          className="bg-brand-teal h-full transition-all duration-300 ease-out"
           style={{ width: `${(currentStep / 4) * 100}%` }}
           aria-hidden="true"
         />
@@ -49,7 +49,7 @@ export function ProgressIndicator({
 
       {/* Desktop & Tablet Stepper List */}
       <nav aria-label="Service request progress" className="hidden sm:block">
-        <ol className="grid grid-cols-4 gap-2">
+        <ol className="grid grid-cols-4 gap-2.5">
           {steps.map((step) => {
             const isCompleted = step < currentStep;
             const isCurrent = step === currentStep;
@@ -61,21 +61,21 @@ export function ProgressIndicator({
                   type="button"
                   disabled={!isClickable}
                   onClick={() => isClickable && onStepClick(step)}
-                  className={`w-full text-left py-2 px-2.5 rounded-xl transition-all flex items-center gap-2.5 ${
+                  className={`w-full text-left py-2.5 px-3 rounded-xl transition-all flex items-center gap-2.5 ${
                     isCurrent
-                      ? 'bg-blue-50/80 border border-blue-200 text-blue-900 shadow-2xs'
+                      ? 'bg-teal-50/70 border border-teal-200 text-brand-navy shadow-2xs'
                       : isCompleted
-                      ? 'text-slate-700 hover:bg-slate-100 cursor-pointer'
-                      : 'text-slate-600 opacity-70 cursor-not-allowed'
-                  } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600`}
+                      ? 'text-brand-slate hover:bg-slate-100 cursor-pointer'
+                      : 'text-slate-400 opacity-70 cursor-not-allowed'
+                  } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal`}
                   aria-current={isCurrent ? 'step' : undefined}
                 >
                   <span
                     className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center shrink-0 transition-colors ${
                       isCompleted
-                        ? 'bg-emerald-600 text-white'
+                        ? 'bg-brand-teal text-white'
                         : isCurrent
-                        ? 'bg-blue-600 text-white'
+                        ? 'bg-brand-navy text-white'
                         : 'bg-slate-200 text-slate-600'
                     }`}
                     aria-hidden="true"
@@ -83,10 +83,10 @@ export function ProgressIndicator({
                     {isCompleted ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : step}
                   </span>
                   <div className="truncate">
-                    <p className="text-[10px] uppercase tracking-wider font-semibold text-slate-600">
+                    <p className="text-[10px] uppercase tracking-wider font-semibold text-brand-slate-light">
                       Step {step}
                     </p>
-                    <p className={`text-xs font-medium truncate ${isCurrent ? 'font-bold text-blue-900' : 'text-slate-700'}`}>
+                    <p className={`text-xs font-medium truncate ${isCurrent ? 'font-bold text-brand-navy' : 'text-brand-slate'}`}>
                       {STEP_LABELS[step]}
                     </p>
                   </div>

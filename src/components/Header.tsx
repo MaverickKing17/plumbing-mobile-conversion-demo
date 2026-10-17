@@ -43,7 +43,7 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-slate-200 shadow-2xs">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
         {/* Zone 1: Brand Wordmark (Single element) */}
         <a
@@ -52,45 +52,47 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
             e.preventDefault();
             handleNavClick('home');
           }}
-          className="flex items-center gap-2.5 text-slate-900 font-bold text-lg tracking-tight whitespace-nowrap shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md p-1"
-          aria-label="Northstar Plumbing Demo - Return to homepage"
+          className="flex items-center gap-2.5 text-brand-navy font-bold text-lg tracking-tight whitespace-nowrap shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal rounded-md p-1"
+          aria-label="Northstar Plumbing Co. Demo - Return to homepage"
         >
-          <span className="w-8 h-8 rounded-lg bg-slate-900 text-sky-400 flex items-center justify-center shrink-0 group-hover:bg-slate-800 transition-colors">
-            <Wrench className="w-4 h-4" aria-hidden="true" />
+          <span className="w-8 h-8 rounded-lg bg-brand-navy text-brand-teal-border flex items-center justify-center shrink-0 group-hover:bg-brand-navy-light transition-colors">
+            <Wrench className="w-4 h-4 text-teal-400" aria-hidden="true" />
           </span>
-          <span className="font-semibold text-base sm:text-lg">Northstar Plumbing Demo</span>
+          <span className="font-bold text-base sm:text-lg text-brand-navy">
+            Northstar Plumbing Co. <span className="text-xs font-semibold text-brand-teal uppercase tracking-wider hidden sm:inline ml-1">Demo</span>
+          </span>
         </a>
 
         {/* Zone 2: Desktop Navigation Links */}
         <nav
-          className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700"
+          className="hidden md:flex items-center gap-6 text-sm font-medium text-brand-slate"
           aria-label="Primary navigation"
         >
           <button
             type="button"
             onClick={() => handleNavClick('services')}
-            className="hover:text-blue-700 transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded"
+            className="hover:text-brand-navy transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal rounded"
           >
             Services
           </button>
           <button
             type="button"
             onClick={() => handleNavClick('how-it-works')}
-            className="hover:text-blue-700 transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded"
+            className="hover:text-brand-navy transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal rounded"
           >
             How It Works
           </button>
           <button
             type="button"
             onClick={() => handleNavClick('contact')}
-            className="hover:text-blue-700 transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded"
+            className="hover:text-brand-navy transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal rounded"
           >
             Contact
           </button>
           <button
             type="button"
             onClick={() => handleNavClick('about-demo')}
-            className="text-slate-500 hover:text-slate-900 transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 rounded"
+            className="text-slate-500 hover:text-brand-navy transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal rounded"
           >
             About Demo
           </button>
@@ -101,7 +103,7 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
           <button
             type="button"
             onClick={handleRequestClick}
-            className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 active:bg-slate-950 rounded-lg shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 min-h-[44px] cursor-pointer"
+            className="hidden sm:inline-flex items-center justify-center px-4 py-2.5 text-sm font-semibold text-white bg-brand-teal hover:bg-brand-teal-hover active:bg-brand-teal-active rounded-lg shadow-sm hover:shadow transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 min-h-[44px] cursor-pointer"
           >
             Request Service
           </button>
@@ -110,7 +112,7 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 min-h-[44px] min-w-[44px] cursor-pointer"
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-brand-navy hover:bg-brand-offwhite focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal min-h-[44px] min-w-[44px] cursor-pointer"
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-nav"
             aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
@@ -127,7 +129,7 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
       {/* Mobile Drawer Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 top-16 bg-slate-900/40 backdrop-blur-xs z-30 md:hidden"
+          className="fixed inset-0 top-16 bg-brand-navy/50 backdrop-blur-xs z-30 md:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
           aria-hidden="true"
         />
@@ -147,28 +149,28 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
             <button
               type="button"
               onClick={() => handleNavClick('services')}
-              className="text-left py-3 px-3 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg transition-colors min-h-[44px] flex items-center"
+              className="text-left py-3 px-3 text-base font-medium text-brand-navy hover:bg-brand-offwhite rounded-lg transition-colors min-h-[44px] flex items-center"
             >
               Services
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('how-it-works')}
-              className="text-left py-3 px-3 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg transition-colors min-h-[44px] flex items-center"
+              className="text-left py-3 px-3 text-base font-medium text-brand-navy hover:bg-brand-offwhite rounded-lg transition-colors min-h-[44px] flex items-center"
             >
               How It Works
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('contact')}
-              className="text-left py-3 px-3 text-base font-medium text-slate-800 hover:bg-slate-50 rounded-lg transition-colors min-h-[44px] flex items-center"
+              className="text-left py-3 px-3 text-base font-medium text-brand-navy hover:bg-brand-offwhite rounded-lg transition-colors min-h-[44px] flex items-center"
             >
               Contact Options
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('about-demo')}
-              className="text-left py-3 px-3 text-base font-medium text-slate-600 hover:bg-slate-50 rounded-lg transition-colors min-h-[44px] flex items-center"
+              className="text-left py-3 px-3 text-base font-medium text-brand-slate hover:bg-brand-offwhite rounded-lg transition-colors min-h-[44px] flex items-center"
             >
               About This Demo
             </button>
@@ -178,7 +180,7 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
             <button
               type="button"
               onClick={handleRequestClick}
-              className="w-full flex items-center justify-center px-4 py-3 text-base font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-sm min-h-[48px]"
+              className="w-full flex items-center justify-center px-4 py-3 text-base font-semibold text-white bg-brand-teal hover:bg-brand-teal-hover rounded-lg shadow-sm min-h-[48px]"
             >
               Request Service
             </button>
