@@ -31,10 +31,14 @@ export function StepContactDetails({
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-lg sm:text-xl font-bold text-brand-navy mb-1">
-          3. Contact details
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-teal-50 text-teal-800 border border-teal-200 mb-2">
+          <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
+          <span>Step 3 · Contact Details</span>
+        </div>
+        <h2 className="text-xl sm:text-2xl font-extrabold text-brand-navy tracking-tight mb-1">
+          Where should we send your estimate?
         </h2>
-        <p className="text-xs sm:text-sm text-brand-slate">
+        <p className="text-xs sm:text-sm text-brand-slate leading-relaxed">
           We only ask for the specific contact method you chose ({contactMethod === 'phone' ? 'Phone' : 'Email'}).
         </p>
       </div>

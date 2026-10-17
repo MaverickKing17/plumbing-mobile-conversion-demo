@@ -13,10 +13,14 @@ export function StepReview({ formData, onEditStep, summaryErrors }: StepReviewPr
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-lg sm:text-xl font-bold text-brand-navy mb-1">
-          4. Review your service request
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-teal-50 text-teal-800 border border-teal-200 mb-2">
+          <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
+          <span>Step 4 · Final Review & Confirmation</span>
+        </div>
+        <h2 className="text-xl sm:text-2xl font-extrabold text-brand-navy tracking-tight mb-1">
+          Review your service request
         </h2>
-        <p className="text-xs sm:text-sm text-brand-slate">
+        <p className="text-xs sm:text-sm text-brand-slate leading-relaxed">
           Please check that your selections and entries look correct before confirming this demo submission.
         </p>
       </div>

@@ -119,18 +119,20 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
   return (
     <section
       id="request-service"
-      className="py-14 sm:py-20 md:py-24 bg-gradient-to-b from-brand-darkblue to-brand-navy border-b border-slate-800 relative"
+      className="py-16 sm:py-20 md:py-28 bg-gradient-to-b from-[#0b1c2d] via-[#102A43] to-[#0e2133] border-b border-slate-800 relative overflow-hidden"
       aria-labelledby="wizard-main-heading"
     >
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal/5 rounded-full blur-3xl pointer-events-none" />
+      {/* Decorative ambient background glows */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-2/3 right-1/4 w-[400px] h-[400px] bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Heading on Dark Background */}
         <div className="text-center max-w-xl mx-auto mb-8 sm:mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-teal-bright block mb-2">
-            Service Request Flow Demo
-          </span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-teal-950/80 border border-teal-500/40 text-brand-teal-bright shadow-inner mb-3">
+            <span className="w-2 h-2 rounded-full bg-brand-teal-bright animate-pulse" />
+            <span>INSTANT SERVICE INTAKE DEMO</span>
+          </div>
           <h2
             id="wizard-main-heading"
             ref={headingRef}
@@ -139,154 +141,187 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
           >
             {isSubmitted ? 'Demo Request Completed' : 'Request Plumbing Help'}
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-brand-muted leading-relaxed">
+          <p className="mt-2.5 text-xs sm:text-sm text-brand-muted leading-relaxed">
             {isSubmitted
               ? 'Thank you for testing the Northstar Plumbing Co. service-request workflow.'
               : 'Complete this quick 4-step intake. You can review and edit all details before confirming.'}
           </p>
+
+          {!isSubmitted && (
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1.5 text-xs font-semibold text-slate-300">
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-400" />
+                No upfront payment
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-400" />
+                Fast GTA response
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                Safe in-memory demo
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Visually Distinct High-Contrast Panel Against Dark Background */}
-        <div className="bg-white rounded-3xl border border-slate-200/90 p-5 sm:p-8 md:p-10 shadow-2xl text-slate-900">
-          {isSubmitted ? (
-            <DemoConfirmation
-              formData={formData}
-              onReset={handleReset}
-              onExploreMore={onReturnHome || (() => {})}
-            />
-          ) : (
-            <form onSubmit={handleSubmit} noValidate>
-              {/* Stepper indicator */}
-              <ProgressIndicator
-                currentStep={currentStep}
-                onStepClick={handleJumpToStep}
-                maxAccessibleStep={maxAccessibleStep}
+        <div className="bg-white rounded-3xl border-2 border-slate-200/90 shadow-2xl shadow-slate-950/50 text-slate-900 overflow-hidden relative">
+          {/* Top Decorative Brand Gradient Bar */}
+          <div className="h-2 w-full bg-gradient-to-r from-teal-500 via-teal-400 to-amber-400" />
+
+          <div className="p-5 sm:p-8 md:p-10">
+            {isSubmitted ? (
+              <DemoConfirmation
+                formData={formData}
+                onReset={handleReset}
+                onExploreMore={onReturnHome || (() => {})}
               />
+            ) : (
+              <form onSubmit={handleSubmit} noValidate>
+                {/* Stepper indicator */}
+                <ProgressIndicator
+                  currentStep={currentStep}
+                  onStepClick={handleJumpToStep}
+                  maxAccessibleStep={maxAccessibleStep}
+                />
 
-              {/* Step Content */}
-              <div className="py-2">
-                {currentStep === 1 && (
-                  <StepServiceSelection
-                    selectedService={formData.serviceType}
-                    onSelect={(service: ServiceType) => {
-                      setFormData((prev) => ({ ...prev, serviceType: service }));
-                      setErrors((prev) => {
-                        const copy = { ...prev };
-                        delete copy.serviceType;
-                        return copy;
-                      });
-                    }}
-                    error={errors.serviceType}
-                  />
-                )}
+                {/* Step Content */}
+                <div className="py-2">
+                  {currentStep === 1 && (
+                    <StepServiceSelection
+                      selectedService={formData.serviceType}
+                      onSelect={(service: ServiceType) => {
+                        setFormData((prev) => ({ ...prev, serviceType: service }));
+                        setErrors((prev) => {
+                          const copy = { ...prev };
+                          delete copy.serviceType;
+                          return copy;
+                        });
+                      }}
+                      error={errors.serviceType}
+                    />
+                  )}
 
-                {currentStep === 2 && (
-                  <StepIssueDetails
-                    location={formData.location}
-                    issueDescription={formData.issueDescription}
-                    contactMethod={formData.contactMethod}
-                    onChangeLocation={(loc) => {
-                      setFormData((prev) => ({ ...prev, location: loc }));
-                      setErrors((prev) => {
-                        const copy = { ...prev };
-                        delete copy.location;
-                        return copy;
-                      });
-                    }}
-                    onChangeDescription={(desc) => {
-                      setFormData((prev) => ({ ...prev, issueDescription: desc }));
-                      setErrors((prev) => {
-                        const copy = { ...prev };
-                        delete copy.issueDescription;
-                        return copy;
-                      });
-                    }}
-                    onChangeContactMethod={(method: ContactMethod) =>
-                      setFormData((prev) => ({ ...prev, contactMethod: method }))
-                    }
-                    errors={errors}
-                  />
-                )}
+                  {currentStep === 2 && (
+                    <StepIssueDetails
+                      location={formData.location}
+                      issueDescription={formData.issueDescription}
+                      contactMethod={formData.contactMethod}
+                      onChangeLocation={(loc) => {
+                        setFormData((prev) => ({ ...prev, location: loc }));
+                        setErrors((prev) => {
+                          const copy = { ...prev };
+                          delete copy.location;
+                          return copy;
+                        });
+                      }}
+                      onChangeDescription={(desc) => {
+                        setFormData((prev) => ({ ...prev, issueDescription: desc }));
+                        setErrors((prev) => {
+                          const copy = { ...prev };
+                          delete copy.issueDescription;
+                          return copy;
+                        });
+                      }}
+                      onChangeContactMethod={(method: ContactMethod) =>
+                        setFormData((prev) => ({ ...prev, contactMethod: method }))
+                      }
+                      errors={errors}
+                    />
+                  )}
 
-                {currentStep === 3 && (
-                  <StepContactDetails
-                    fullName={formData.fullName}
-                    phoneNumber={formData.phoneNumber}
-                    emailAddress={formData.emailAddress}
-                    contactMethod={formData.contactMethod}
-                    onChangeFullName={(name) => {
-                      setFormData((prev) => ({ ...prev, fullName: name }));
-                      setErrors((prev) => {
-                        const copy = { ...prev };
-                        delete copy.fullName;
-                        return copy;
-                      });
-                    }}
-                    onChangePhoneNumber={(phone) => {
-                      setFormData((prev) => ({ ...prev, phoneNumber: phone }));
-                      setErrors((prev) => {
-                        const copy = { ...prev };
-                        delete copy.phoneNumber;
-                        return copy;
-                      });
-                    }}
-                    onChangeEmailAddress={(email) => {
-                      setFormData((prev) => ({ ...prev, emailAddress: email }));
-                      setErrors((prev) => {
-                        const copy = { ...prev };
-                        delete copy.emailAddress;
-                        return copy;
-                      });
-                    }}
-                    errors={errors}
-                  />
-                )}
+                  {currentStep === 3 && (
+                    <StepContactDetails
+                      fullName={formData.fullName}
+                      phoneNumber={formData.phoneNumber}
+                      emailAddress={formData.emailAddress}
+                      contactMethod={formData.contactMethod}
+                      onChangeFullName={(name) => {
+                        setFormData((prev) => ({ ...prev, fullName: name }));
+                        setErrors((prev) => {
+                          const copy = { ...prev };
+                          delete copy.fullName;
+                          return copy;
+                        });
+                      }}
+                      onChangePhoneNumber={(phone) => {
+                        setFormData((prev) => ({ ...prev, phoneNumber: phone }));
+                        setErrors((prev) => {
+                          const copy = { ...prev };
+                          delete copy.phoneNumber;
+                          return copy;
+                        });
+                      }}
+                      onChangeEmailAddress={(email) => {
+                        setFormData((prev) => ({ ...prev, emailAddress: email }));
+                        setErrors((prev) => {
+                          const copy = { ...prev };
+                          delete copy.emailAddress;
+                          return copy;
+                        });
+                      }}
+                      errors={errors}
+                    />
+                  )}
 
-                {currentStep === 4 && (
-                  <StepReview
-                    formData={formData}
-                    onEditStep={handleJumpToStep}
-                    summaryErrors={summaryErrors}
-                  />
-                )}
-              </div>
+                  {currentStep === 4 && (
+                    <StepReview
+                      formData={formData}
+                      onEditStep={handleJumpToStep}
+                      summaryErrors={summaryErrors}
+                    />
+                  )}
+                </div>
 
-              {/* Navigation Controls */}
-              <div className="mt-8 pt-6 border-t border-slate-200/80 flex items-center justify-between gap-4">
-                {currentStep > 1 ? (
-                  <button
-                    type="button"
-                    onClick={handleBack}
-                    className="inline-flex items-center gap-2 px-5 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm rounded-xl border border-slate-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[46px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
-                  >
-                    <ArrowLeft className="w-4 h-4" aria-hidden="true" />
-                    <span>Back</span>
-                  </button>
-                ) : (
-                  <div aria-hidden="true" />
-                )}
+                {/* Navigation Controls */}
+                <div className="mt-8 pt-6 border-t border-slate-200/90 flex items-center justify-between gap-4">
+                  {currentStep > 1 ? (
+                    <button
+                      type="button"
+                      onClick={handleBack}
+                      className="inline-flex items-center gap-2 px-5 py-3 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-sm rounded-xl border border-slate-300 shadow-sm transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[48px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+                    >
+                      <ArrowLeft className="w-4 h-4" aria-hidden="true" />
+                      <span>Back</span>
+                    </button>
+                  ) : (
+                    <div aria-hidden="true" />
+                  )}
 
-                {currentStep < 4 ? (
-                  <button
-                    type="button"
-                    onClick={handleNext}
-                    className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-bold text-base rounded-xl shadow-lg shadow-teal-900/30 hover:shadow-xl hover:shadow-teal-500/30 border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[48px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
-                  >
-                    <span>Continue</span>
-                    <ArrowRight className="w-4 h-4 text-teal-200 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                  </button>
-                ) : (
-                  <button
-                    type="submit"
-                    className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-extrabold text-base rounded-xl shadow-xl shadow-teal-900/40 hover:shadow-2xl hover:shadow-teal-500/30 border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[50px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
-                  >
-                    <CheckCircle2 className="w-5 h-5 text-teal-200" aria-hidden="true" />
-                    <span>Confirm Demo Submission</span>
-                  </button>
-                )}
-              </div>
-            </form>
-          )}
+                  {currentStep < 4 ? (
+                    <button
+                      type="button"
+                      onClick={handleNext}
+                      className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-extrabold text-base rounded-xl shadow-xl shadow-teal-900/30 hover:shadow-2xl hover:shadow-teal-500/30 border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[50px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
+                    >
+                      <span>Continue</span>
+                      <ArrowRight className="w-4 h-4 text-teal-200 group-hover:translate-x-1.5 transition-transform" aria-hidden="true" />
+                    </button>
+                  ) : (
+                    <button
+                      type="submit"
+                      className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-extrabold text-base rounded-xl shadow-xl shadow-teal-900/40 hover:shadow-2xl hover:shadow-teal-500/30 border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[52px] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2 ml-auto"
+                    >
+                      <CheckCircle2 className="w-5 h-5 text-teal-200" aria-hidden="true" />
+                      <span>Confirm Demo Submission</span>
+                    </button>
+                  )}
+                </div>
+
+                {/* Trust & Demo Reassurance Footer */}
+                <div className="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-500">
+                  <span className="flex items-center gap-1.5 text-slate-500">
+                    <span className="text-amber-500">🔒</span>
+                    Demo intake mode · No real contractor dispatched
+                  </span>
+                  <span className="text-slate-400 font-medium">
+                    Takes ~60 seconds to complete
+                  </span>
+                </div>
+              </form>
+            )}
+          </div>
         </div>
       </div>
     </section>

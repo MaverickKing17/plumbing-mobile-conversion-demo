@@ -34,11 +34,15 @@ export function StepIssueDetails({
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-lg sm:text-xl font-bold text-brand-navy mb-1">
-          2. Describe the issue and your location
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-teal-50 text-teal-800 border border-teal-200 mb-2">
+          <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
+          <span>Step 2 · Problem Details & Municipality</span>
+        </div>
+        <h2 className="text-xl sm:text-2xl font-extrabold text-brand-navy tracking-tight mb-1">
+          Describe the issue and your location
         </h2>
-        <p className="text-xs sm:text-sm text-brand-slate">
-          Provide your general municipality and a brief summary of the problem. No full street address is required.
+        <p className="text-xs sm:text-sm text-brand-slate leading-relaxed">
+          Provide your general GTA municipality and a brief summary of the problem. No full street address is required for this demo intake.
         </p>
       </div>
 
