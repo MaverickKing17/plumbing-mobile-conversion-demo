@@ -7,7 +7,7 @@ interface FooterProps {
 
 export function Footer({ onNavigate, onRequestClick }: FooterProps) {
   return (
-    <footer className="bg-brand-navy text-slate-300 pt-14 pb-16 border-t border-slate-800 relative">
+    <footer className="bg-brand-navy text-slate-300 pt-14 pb-24 sm:pb-20 border-t border-slate-800 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand Info */}

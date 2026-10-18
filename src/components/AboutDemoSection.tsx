@@ -124,7 +124,7 @@ export function AboutDemoSection() {
             <div>
               <p className="text-base font-bold text-white mb-0.5">Privacy &amp; Performance Integrity</p>
               <p className="text-xs sm:text-sm text-slate-300">
-                Zero third-party tracking scripts, cookies, or persistent storage. Form data is strictly ephemeral and kept in browser memory.
+                Form data is strictly ephemeral in browser memory with zero server tracking. The embedded AI Receptionist operates as an interactive trade inquiry demo.
               </p>
             </div>
           </div>
