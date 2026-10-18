@@ -1,5 +1,6 @@
-import { Droplets, Wrench, Flame, PlusCircle, ArrowRight } from 'lucide-react';
+import { Droplets, Wrench, Flame, PlusCircle, ArrowRight, Bot } from 'lucide-react';
 import { ServiceType, SERVICE_OPTIONS } from '../types/serviceRequest';
+import { openBotpressChat } from '../utils/botpressManager';
 
 interface ServicesSectionProps {
   onSelectService: (serviceId: ServiceType) => void;
@@ -94,7 +95,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
                 </div>
               </div>
 
-              <div>
+              <div className="space-y-2">
                 <button
                   type="button"
                   onClick={() => onSelectService(service.id)}
@@ -103,6 +104,16 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
                 >
                   <span>Request this service</span>
                   <ArrowRight className="w-4 h-4 text-teal-200 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => openBotpressChat(`I need fast assistance or a quote regarding ${service.title} in the GTA.`)}
+                  aria-label={`Ask AI Receptionist about ${service.title.toLowerCase()}`}
+                  className="w-full inline-flex items-center justify-center gap-2 px-3 py-2 text-xs font-semibold text-brand-teal-bright hover:text-white bg-[#122B40] hover:bg-[#183149] rounded-xl border border-[#3A566D] hover:border-brand-teal transition-all cursor-pointer min-h-[38px]"
+                >
+                  <Bot className="w-3.5 h-3.5 text-brand-teal-bright" />
+                  <span>Ask 24/7 AI Receptionist</span>
                 </button>
               </div>
             </article>

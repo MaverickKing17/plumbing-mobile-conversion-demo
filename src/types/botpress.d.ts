@@ -30,6 +30,7 @@ export interface BotpressWebchatConfig {
 
 export interface BotpressApi {
   init: (config: BotpressWebchatConfig) => void;
+  config?: (configOptions: Record<string, unknown>) => void;
   open?: () => void;
   close?: () => void;
   toggle?: () => void;

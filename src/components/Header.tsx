@@ -77,6 +77,14 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
           </button>
           <button
             type="button"
+            onClick={() => handleNavClick('ai-receptionist')}
+            className="hover:text-brand-teal-bright transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright rounded inline-flex items-center gap-1.5"
+          >
+            <span className="w-2 h-2 rounded-full bg-emerald-400 inline-block animate-pulse"></span>
+            <span>AI Receptionist</span>
+          </button>
+          <button
+            type="button"
             onClick={() => handleNavClick('how-it-works')}
             className="hover:text-brand-teal-bright transition-colors whitespace-nowrap py-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright rounded"
           >
@@ -152,6 +160,14 @@ export function Header({ onRequestServiceClick, onNavigateSection }: HeaderProps
               className="text-left py-3 px-3 text-base font-medium text-white hover:bg-brand-darkblue rounded-lg transition-colors min-h-[44px] flex items-center"
             >
               Services
+            </button>
+            <button
+              type="button"
+              onClick={() => handleNavClick('ai-receptionist')}
+              className="text-left py-3 px-3 text-base font-medium text-white hover:bg-brand-darkblue rounded-lg transition-colors min-h-[44px] flex items-center justify-between"
+            >
+              <span>AI Receptionist (24/7)</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             </button>
             <button
               type="button"

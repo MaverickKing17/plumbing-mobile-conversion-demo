@@ -12,6 +12,8 @@ import { HowItWorks } from './components/HowItWorks';
 import { ServiceRequestWizard } from './components/ServiceRequestWizard';
 import { ContactSection } from './components/ContactSection';
 import { AboutDemoSection } from './components/AboutDemoSection';
+import { AiReceptionistShowcase } from './components/AiReceptionistShowcase';
+import { BotpressTeaser } from './components/BotpressTeaser';
 import { Footer } from './components/Footer';
 import { ServiceType } from './types/serviceRequest';
 
@@ -58,6 +60,9 @@ export default function App() {
         {/* Core Services with direct link into the wizard */}
         <ServicesSection onSelectService={handleSelectServiceFromCard} />
 
+        {/* 24/7 AI Receptionist Lead-Generation Showcase & Live Testing Hub */}
+        <AiReceptionistShowcase />
+
         {/* How It Works with clear demo scope */}
         <HowItWorks />
 
@@ -79,6 +84,9 @@ export default function App() {
         onNavigate={scrollToSection}
         onRequestClick={handleRequestServiceClick}
       />
+
+      {/* Floating AI Receptionist Quick-Action Teaser */}
+      <BotpressTeaser />
     </div>
   );
 }

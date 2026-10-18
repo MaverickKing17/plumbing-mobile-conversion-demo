@@ -1,5 +1,6 @@
-import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Bot, MessageSquare } from 'lucide-react';
 import { GTA_SERVICE_AREAS } from '../types/serviceRequest';
+import { openBotpressChat } from '../utils/botpressManager';
 
 interface ContactSectionProps {
   onRequestClick: () => void;
@@ -46,6 +47,33 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
                   <p className="text-xs text-[#CBD5E1] mt-1">
                     Non-operational fictional demonstration number.
                   </p>
+                </div>
+              </div>
+
+              {/* 24/7 AI Receptionist Lead-Gen Channel */}
+              <div className="group p-5 rounded-2xl border-2 border-brand-teal/60 bg-[#203B50] hover:bg-[#26455D] flex items-start gap-4 shadow-md hover:border-brand-teal transition-all duration-200 hover:-translate-y-0.5">
+                <div className="w-12 h-12 rounded-2xl bg-teal-950/80 text-brand-teal-bright border border-teal-500/50 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-all">
+                  <Bot className="w-6 h-6" aria-hidden="true" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-sm font-bold text-white">24/7 AI Receptionist</span>
+                    <span className="text-[10px] font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-600/60 px-2 py-0.5 rounded-md flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      Interactive Live Bot
+                    </span>
+                  </div>
+                  <p className="text-xs text-[#CBD5E1] mt-1">
+                    Instant emergency triage, service area qualification, and callback dispatch.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => openBotpressChat('Hello! I would like to speak with the AI Receptionist.')}
+                    className="mt-2.5 inline-flex items-center gap-2 px-3 py-1.5 bg-[#122B40] hover:bg-[#183149] text-brand-teal-bright hover:text-white rounded-lg text-xs font-bold border border-[#3A566D] hover:border-brand-teal transition-all cursor-pointer"
+                  >
+                    <MessageSquare className="w-3.5 h-3.5" />
+                    <span>Launch AI Chat Window</span>
+                  </button>
                 </div>
               </div>
 

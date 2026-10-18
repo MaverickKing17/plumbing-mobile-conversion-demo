@@ -1,4 +1,5 @@
-import { ArrowRight, CheckCircle2, ShieldCheck, MapPin, Gauge, Clock, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck, MapPin, Gauge, Clock, Sparkles, MessageSquare } from 'lucide-react';
+import { openBotpressChat } from '../utils/botpressManager';
 
 interface HeroSectionProps {
   onRequestService: () => void;
@@ -49,10 +50,20 @@ export function HeroSection({ onRequestService, onExploreServices }: HeroSection
 
               <button
                 type="button"
-                onClick={onExploreServices}
-                className="inline-flex items-center justify-center px-7 py-4 bg-[#203B50] hover:bg-[#26455D] text-white font-bold text-base rounded-2xl border-2 border-[#3A566D] hover:border-[#2DD4BF] shadow-lg hover:shadow-teal-950/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy min-h-[52px] cursor-pointer"
+                onClick={() => openBotpressChat('Hello! I would like to speak with the AI Receptionist about a plumbing issue in Toronto.')}
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-4 bg-[#122B40] hover:bg-[#183149] text-brand-teal-bright hover:text-white font-bold text-base rounded-2xl border-2 border-[#3A566D] hover:border-brand-teal shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 min-h-[52px] cursor-pointer"
               >
-                Explore Services
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <MessageSquare className="w-4 h-4 text-brand-teal-bright" />
+                <span>Chat with AI (24/7)</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={onExploreServices}
+                className="inline-flex items-center justify-center px-6 py-4 bg-[#203B50] hover:bg-[#26455D] text-slate-200 hover:text-white font-bold text-base rounded-2xl border-2 border-[#3A566D] hover:border-[#2DD4BF] shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright focus-visible:ring-offset-2 focus-visible:ring-offset-brand-navy min-h-[52px] cursor-pointer"
+              >
+                Services
               </button>
             </div>
 

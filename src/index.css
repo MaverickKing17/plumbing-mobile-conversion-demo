@@ -90,3 +90,44 @@
     }
   }
 }
+
+/* ========================================================
+   Botpress AI Receptionist Webchat v5 Custom Styles
+   Enforces Northstar Plumbing's Navy & Teal Brand Identity
+   ======================================================== */
+
+:root {
+  --bp-primary-color: #0D9488;
+  --bp-font-family: "Segoe UI", "Segoe UI Variable", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Target Botpress webchat elements and container */
+#bp-web-widget,
+.bpContainer,
+[class*="bpWebchat"],
+[class*="bpContainer"],
+iframe[id*="bp-webchat"] {
+  font-family: var(--bp-font-family) !important;
+  z-index: 9998 !important;
+}
+
+/* Position the Botpress launcher comfortably with safe margin on desktop and mobile */
+#bp-web-widget,
+.bpContainer {
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem)) !important;
+  right: max(1.25rem, env(safe-area-inset-right, 1.25rem)) !important;
+}
+
+/* Ensure launcher button has high contrast, rounded shape, and subtle shadow */
+button[class*="bpFab"],
+button[class*="bp-launcher"],
+[class*="bp-webchat-launcher"] {
+  box-shadow: 0 10px 25px -3px rgba(16, 42, 69, 0.4), 0 4px 6px -4px rgba(13, 148, 136, 0.3) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease !important;
+}
+
+button[class*="bpFab"]:hover,
+button[class*="bp-launcher"]:hover {
+  transform: scale(1.05) translateY(-2px) !important;
+}
+
