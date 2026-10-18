@@ -25,16 +25,16 @@ export function AboutDemoSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {/* Improvement 1 Card */}
-          <div className="group bg-[#152B40] hover:bg-[#183149] rounded-3xl border border-slate-700/80 p-7 sm:p-9 shadow-xl hover:border-teal-400/50 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
+          <div className="group bg-[#203B50] hover:bg-[#26455D] rounded-3xl border-2 border-[#3A566D] p-7 sm:p-9 shadow-xl hover:border-[#0D9488] transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
             {/* Ambient top light line */}
-            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/70 to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#2DD4BF] to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
 
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
-                <div className="w-13 h-13 rounded-2xl bg-teal-950/90 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                <div className="w-13 h-13 rounded-2xl bg-[#122B40] border border-[#3A566D] text-brand-teal-bright flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:border-teal-400/50 transition-all">
                   <Zap className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
                 </div>
-                <span className="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal-950/80 border border-teal-400/40 text-brand-teal-bright shadow-xs">
+                <span className="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#122B40] border border-[#3A566D] text-brand-teal-bright shadow-xs">
                   Mobile Speed &amp; UX
                 </span>
               </div>
@@ -42,25 +42,25 @@ export function AboutDemoSection() {
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-3">
                 Improvement 1: Faster, Clearer Mobile Experience
               </h3>
-              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+              <p className="text-sm text-[#CBD5E1] leading-relaxed mb-6">
                 Homeowners dealing with a plumbing problem are often on a smartphone under stress. Heavy images, intrusive popups, and vague copy cause high bounce rates.
               </p>
 
               <ul className="space-y-3 text-xs sm:text-sm text-slate-200">
-                <li className="flex items-start gap-3 bg-[#102A43] p-3.5 rounded-xl border border-slate-700/70">
-                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                <li className="flex items-start gap-3 bg-[#122B40] p-3.5 rounded-xl border border-[#3A566D]">
+                  <span className="w-5 h-5 rounded-full bg-[#203B50] border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
                   </span>
                   <span><strong>Zero bloated dependencies:</strong> Native system font stack renders instantly with zero layout shifts.</span>
                 </li>
-                <li className="flex items-start gap-3 bg-[#102A43] p-3.5 rounded-xl border border-slate-700/70">
-                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                <li className="flex items-start gap-3 bg-[#122B40] p-3.5 rounded-xl border border-[#3A566D]">
+                  <span className="w-5 h-5 rounded-full bg-[#203B50] border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
                   </span>
                   <span><strong>Immediate visual hierarchy:</strong> Headline, core offerings, and action visible without endless scrolling.</span>
                 </li>
-                <li className="flex items-start gap-3 bg-[#102A43] p-3.5 rounded-xl border border-slate-700/70">
-                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                <li className="flex items-start gap-3 bg-[#122B40] p-3.5 rounded-xl border border-[#3A566D]">
+                  <span className="w-5 h-5 rounded-full bg-[#203B50] border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
                   </span>
                   <span><strong>Honest, credible messaging:</strong> Transparent GTA service scope without fabricated emergency claims.</span>
@@ -70,16 +70,16 @@ export function AboutDemoSection() {
           </div>
 
           {/* Improvement 2 Card */}
-          <div className="group bg-[#152B40] hover:bg-[#183149] rounded-3xl border border-slate-700/80 p-7 sm:p-9 shadow-xl hover:border-teal-400/50 transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
+          <div className="group bg-[#203B50] hover:bg-[#26455D] rounded-3xl border-2 border-[#3A566D] p-7 sm:p-9 shadow-xl hover:border-[#0D9488] transition-all duration-300 relative overflow-hidden flex flex-col justify-between">
             {/* Ambient top light line */}
-            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/70 to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#2DD4BF] to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
 
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
-                <div className="w-13 h-13 rounded-2xl bg-teal-950/90 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                <div className="w-13 h-13 rounded-2xl bg-[#122B40] border border-[#3A566D] text-brand-teal-bright flex items-center justify-center shadow-sm group-hover:scale-105 group-hover:border-teal-400/50 transition-all">
                   <Accessibility className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
                 </div>
-                <span className="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal-950/80 border border-teal-400/40 text-brand-teal-bright shadow-xs">
+                <span className="px-3.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#122B40] border border-[#3A566D] text-brand-teal-bright shadow-xs">
                   Accessibility &amp; Flow
                 </span>
               </div>
@@ -87,25 +87,25 @@ export function AboutDemoSection() {
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-3">
                 Improvement 2: Accessible 4-Step Intake Flow
               </h3>
-              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+              <p className="text-sm text-[#CBD5E1] leading-relaxed mb-6">
                 Replaces cluttered generic contact forms with an intuitive, guided intake that structures incoming homeowner requests before a phone call is even placed.
               </p>
 
               <ul className="space-y-3 text-xs sm:text-sm text-slate-200">
-                <li className="flex items-start gap-3 bg-[#102A43] p-3.5 rounded-xl border border-slate-700/70">
-                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                <li className="flex items-start gap-3 bg-[#122B40] p-3.5 rounded-xl border border-[#3A566D]">
+                  <span className="w-5 h-5 rounded-full bg-[#203B50] border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
                   </span>
                   <span><strong>WCAG 2.2 AA compliant:</strong> Explicit labels, ARIA live step announcements, and full keyboard navigation.</span>
                 </li>
-                <li className="flex items-start gap-3 bg-[#102A43] p-3.5 rounded-xl border border-slate-700/70">
-                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                <li className="flex items-start gap-3 bg-[#122B40] p-3.5 rounded-xl border border-[#3A566D]">
+                  <span className="w-5 h-5 rounded-full bg-[#203B50] border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
                   </span>
                   <span><strong>Contextual intake:</strong> Captures location and problem summary cleanly without invasive personal data harvesting.</span>
                 </li>
-                <li className="flex items-start gap-3 bg-[#102A43] p-3.5 rounded-xl border border-slate-700/70">
-                  <span className="w-5 h-5 rounded-full bg-teal-950 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                <li className="flex items-start gap-3 bg-[#122B40] p-3.5 rounded-xl border border-[#3A566D]">
+                  <span className="w-5 h-5 rounded-full bg-[#203B50] border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
                     <Check className="w-3.5 h-3.5 stroke-[2.5]" aria-hidden="true" />
                   </span>
                   <span><strong>Editable review summary:</strong> Homeowners can verify their details and return to any step before confirming.</span>
@@ -116,19 +116,19 @@ export function AboutDemoSection() {
         </div>
 
         {/* Privacy & Performance Guarantee */}
-        <div className="mt-8 bg-[#152B40] rounded-3xl border border-slate-700/80 p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-xl relative overflow-hidden">
+        <div className="mt-8 bg-[#203B50] rounded-3xl border-2 border-[#3A566D] p-6 sm:p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-xl relative overflow-hidden">
           <div className="flex items-start sm:items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-teal-950/90 border border-teal-400/50 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-md">
+            <div className="w-12 h-12 rounded-2xl bg-[#122B40] border border-[#3A566D] text-brand-teal-bright flex items-center justify-center shrink-0 shadow-md">
               <ShieldCheck className="w-6 h-6 stroke-[2]" aria-hidden="true" />
             </div>
             <div>
               <p className="text-base font-bold text-white mb-0.5">Privacy &amp; Performance Integrity</p>
-              <p className="text-xs sm:text-sm text-slate-300">
+              <p className="text-xs sm:text-sm text-[#CBD5E1]">
                 Form data is strictly ephemeral in browser memory with zero server tracking. The embedded AI Receptionist operates as an interactive trade inquiry demo.
               </p>
             </div>
           </div>
-          <span className="text-xs font-bold text-brand-teal-bright bg-teal-950/80 border border-teal-500/40 px-4 py-2 rounded-xl whitespace-nowrap shadow-xs">
+          <span className="text-xs font-bold text-brand-teal-bright bg-[#122B40] border border-[#3A566D] px-4 py-2 rounded-xl whitespace-nowrap shadow-xs">
             Vercel Ready · Vite + React + TS
           </span>
         </div>

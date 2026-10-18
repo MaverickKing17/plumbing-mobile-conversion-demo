@@ -13,7 +13,7 @@ export function Footer({ onNavigate, onRequestClick }: FooterProps) {
           {/* Brand Info */}
           <div className="md:col-span-2 space-y-3.5">
             <div className="flex items-center gap-2.5 text-white font-bold text-lg">
-              <span className="w-8 h-8 rounded-lg bg-brand-darkblue border border-slate-700 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-sm">
+              <span className="w-8 h-8 rounded-lg bg-[#122B40] border border-[#3A566D] text-brand-teal-bright flex items-center justify-center shrink-0 shadow-sm">
                 <Wrench className="w-4 h-4" aria-hidden="true" />
               </span>
               <span>Northstar Plumbing Co. Demo</span>

@@ -129,7 +129,7 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Heading on Dark Background */}
         <div className="text-center max-w-xl mx-auto mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-teal-950/80 border border-teal-500/40 text-brand-teal-bright shadow-inner mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#122B40] border border-[#3A566D] text-brand-teal-bright shadow-inner mb-3">
             <span className="w-2 h-2 rounded-full bg-brand-teal-bright animate-pulse" />
             <span>INSTANT SERVICE INTAKE DEMO</span>
           </div>
@@ -165,8 +165,8 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
           )}
         </div>
 
-        {/* Visually Distinct Elevated Panel with Softened Blue-Gray Transition Rim */}
-        <div className="bg-[#152B40]/80 p-2 sm:p-3 rounded-[2rem] border border-slate-700/80 shadow-2xl shadow-slate-950/60">
+        {/* Visually Distinct Elevated Panel: #203B50 with #3A566D Border */}
+        <div className="bg-[#203B50] p-2.5 sm:p-3.5 rounded-[2.25rem] border-2 border-[#3A566D] shadow-2xl shadow-slate-950/80">
           <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm text-[#102A43] overflow-hidden relative">
             {/* Top Decorative Brand Gradient Bar */}
             <div className="h-1.5 w-full bg-gradient-to-r from-teal-600 via-teal-400 to-amber-400" />

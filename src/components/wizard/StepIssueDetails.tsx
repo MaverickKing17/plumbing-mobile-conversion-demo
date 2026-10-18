@@ -146,20 +146,20 @@ export function StepIssueDetails({
             onClick={() => onChangeContactMethod('phone')}
             className={`p-4 rounded-2xl border-2 text-left transition-all duration-200 flex items-center gap-3.5 cursor-pointer min-h-[52px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal hover:-translate-y-0.5 ${
               contactMethod === 'phone'
-                ? 'border-teal-500 bg-teal-50/80 shadow-md ring-2 ring-teal-500/20'
-                : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 shadow-2xs'
+                ? 'border-[#0D9488] bg-teal-50/90 shadow-md ring-2 ring-teal-500/20'
+                : 'border-slate-300 bg-white hover:border-[#0D9488] hover:bg-slate-50 shadow-2xs'
             }`}
           >
             <div
               className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
-                contactMethod === 'phone' ? 'bg-teal-500 text-white shadow-xs' : 'bg-slate-100 text-slate-700'
+                contactMethod === 'phone' ? 'bg-[#0D9488] text-white shadow-xs' : 'bg-[#F5F7FA] border border-slate-300 text-slate-700'
               }`}
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
             </div>
             <div>
-              <p className="text-sm font-bold text-brand-navy">Phone Call / SMS</p>
-              <p className="text-xs text-brand-slate-light">Direct phone callback</p>
+              <p className="text-sm font-bold text-[#102A43]">Phone Call / SMS</p>
+              <p className="text-xs text-[#475569]">Direct phone callback</p>
             </div>
           </button>
 
@@ -170,13 +170,13 @@ export function StepIssueDetails({
             onClick={() => onChangeContactMethod('email')}
             className={`p-4 rounded-2xl border-2 text-left transition-all duration-200 flex items-center gap-3.5 cursor-pointer min-h-[52px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal hover:-translate-y-0.5 ${
               contactMethod === 'email'
-                ? 'border-teal-500 bg-teal-50/80 shadow-md ring-2 ring-teal-500/20'
-                : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 shadow-2xs'
+                ? 'border-[#0D9488] bg-teal-50/90 shadow-md ring-2 ring-teal-500/20'
+                : 'border-slate-300 bg-white hover:border-[#0D9488] hover:bg-slate-50 shadow-2xs'
             }`}
           >
             <div
               className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
-                contactMethod === 'email' ? 'bg-teal-500 text-white shadow-xs' : 'bg-slate-100 text-slate-700'
+                contactMethod === 'email' ? 'bg-[#0D9488] text-white shadow-xs' : 'bg-[#F5F7FA] border border-slate-300 text-slate-700'
               }`}
             >
               <Mail className="w-4 h-4" aria-hidden="true" />

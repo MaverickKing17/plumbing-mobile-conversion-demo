@@ -43,40 +43,40 @@ export function DemoConfirmation({ formData, onReset, onExploreMore }: DemoConfi
       </div>
 
       {/* Captured Demonstration Summary */}
-      <div className="bg-white rounded-2xl border border-slate-200 p-6 shadow-2xs">
-        <h3 className="text-sm font-bold uppercase tracking-wider text-brand-slate-light mb-4 flex items-center gap-2">
+      <div className="bg-white rounded-2xl border-2 border-slate-300 p-6 shadow-sm">
+        <h3 className="text-sm font-bold uppercase tracking-wider text-[#475569] mb-4 flex items-center gap-2">
           <ShieldCheck className="w-4 h-4 text-brand-teal" aria-hidden="true" />
-          <span className="text-brand-navy">Simulated Request Payload (Client In-Memory)</span>
+          <span className="text-[#102A43]">Simulated Request Payload (Client In-Memory)</span>
         </h3>
 
         <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-          <div className="bg-brand-offwhite p-3.5 rounded-xl border border-slate-200/80">
-            <dt className="text-xs font-semibold text-brand-slate-light mb-1">Service Type</dt>
-            <dd className="font-bold text-brand-navy">{serviceObj?.title || 'Not specified'}</dd>
+          <div className="bg-[#F5F7FA] p-4 rounded-xl border border-slate-300 shadow-2xs">
+            <dt className="text-xs font-bold uppercase tracking-wider text-[#475569] mb-1">Service Type</dt>
+            <dd className="font-bold text-[#102A43]">{serviceObj?.title || 'Not specified'}</dd>
           </div>
 
-          <div className="bg-brand-offwhite p-3.5 rounded-xl border border-slate-200/80">
-            <dt className="text-xs font-semibold text-brand-slate-light mb-1">GTA Municipality</dt>
-            <dd className="font-bold text-brand-navy">{formData.location || 'Not specified'}</dd>
+          <div className="bg-[#F5F7FA] p-4 rounded-xl border border-slate-300 shadow-2xs">
+            <dt className="text-xs font-bold uppercase tracking-wider text-[#475569] mb-1">GTA Municipality</dt>
+            <dd className="font-bold text-[#102A43]">{formData.location || 'Not specified'}</dd>
           </div>
 
-          <div className="bg-brand-offwhite p-3.5 rounded-xl border border-slate-200/80 sm:col-span-2">
-            <dt className="text-xs font-semibold text-brand-slate-light mb-1">Issue Description</dt>
-            <dd className="text-brand-slate text-xs sm:text-sm leading-relaxed whitespace-pre-wrap">
+          <div className="bg-[#F5F7FA] p-4 rounded-xl border border-slate-300 shadow-2xs sm:col-span-2">
+            <dt className="text-xs font-bold uppercase tracking-wider text-[#475569] mb-1">Issue Description</dt>
+            <dd className="text-[#102A43] text-xs sm:text-sm leading-relaxed whitespace-pre-wrap">
               {formData.issueDescription}
             </dd>
           </div>
 
-          <div className="bg-brand-offwhite p-3.5 rounded-xl border border-slate-200/80">
-            <dt className="text-xs font-semibold text-brand-slate-light mb-1">Contact Name</dt>
-            <dd className="font-medium text-brand-navy">{formData.fullName}</dd>
+          <div className="bg-[#F5F7FA] p-4 rounded-xl border border-slate-300 shadow-2xs">
+            <dt className="text-xs font-bold uppercase tracking-wider text-[#475569] mb-1">Contact Name</dt>
+            <dd className="font-bold text-[#102A43]">{formData.fullName}</dd>
           </div>
 
-          <div className="bg-brand-offwhite p-3.5 rounded-xl border border-slate-200/80">
-            <dt className="text-xs font-semibold text-brand-slate-light mb-1">
+          <div className="bg-[#F5F7FA] p-4 rounded-xl border border-slate-300 shadow-2xs">
+            <dt className="text-xs font-bold uppercase tracking-wider text-[#475569] mb-1">
               Contact Detail ({formData.contactMethod})
             </dt>
-            <dd className="font-mono text-brand-navy">
+            <dd className="font-mono font-bold text-[#102A43]">
               {formData.contactMethod === 'phone' ? formData.phoneNumber : formData.emailAddress}
             </dd>
           </div>
