@@ -40,7 +40,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
   return (
     <section
       id="services"
-      className="py-14 sm:py-20 bg-brand-darkblue border-b border-slate-800 relative"
+      className="py-14 sm:py-20 bg-[#1B3448] border-b border-slate-700/70 relative"
       aria-labelledby="services-heading"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -64,7 +64,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
           {SERVICE_OPTIONS.slice(0, 3).map((service) => (
             <article
               key={service.id}
-              className="group bg-gradient-to-b from-slate-900/95 via-[#13283c]/95 to-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-7 sm:p-8 flex flex-col justify-between shadow-2xl hover:border-teal-400/60 hover:shadow-teal-950/60 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden focus-within:ring-2 focus-within:ring-brand-teal-bright"
+              className="group bg-[#152B40] hover:bg-[#183149] rounded-3xl border border-slate-700/80 p-7 sm:p-8 flex flex-col justify-between shadow-xl hover:border-teal-400/60 hover:shadow-2xl hover:shadow-teal-950/40 transition-all duration-200 hover:-translate-y-1 relative overflow-hidden focus-within:ring-2 focus-within:ring-brand-teal-bright"
             >
               {/* Subtle top ambient glow line */}
               <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/60 to-transparent opacity-60 group-hover:opacity-100 transition-opacity" />
@@ -79,7 +79,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
                 </p>
 
                 {/* Polished contrast panel for common examples */}
-                <div className="mb-6 bg-slate-950/60 rounded-2xl p-4 border border-slate-800 shadow-inner">
+                <div className="mb-6 bg-[#102A43] rounded-2xl p-4 border border-slate-700/70 shadow-inner">
                   <p className="text-xs font-bold uppercase tracking-wider text-brand-teal-bright mb-2.5">
                     Common Examples:
                   </p>
@@ -99,7 +99,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
                   type="button"
                   onClick={() => onSelectService(service.id)}
                   aria-label={`Request ${service.title.toLowerCase()} service`}
-                  className="group/btn w-full inline-flex items-center justify-center gap-2.5 px-5 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-bold text-sm tracking-wide rounded-xl shadow-lg shadow-teal-950/70 hover:shadow-teal-500/30 hover:shadow-xl border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 min-h-[48px] cursor-pointer"
+                  className="group/btn w-full inline-flex items-center justify-center gap-2.5 px-5 py-3.5 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-bold text-sm tracking-wide rounded-xl shadow-md shadow-teal-950/70 hover:shadow-teal-500/30 hover:shadow-lg border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 min-h-[48px] cursor-pointer"
                 >
                   <span>Request this service</span>
                   <ArrowRight className="w-4 h-4 text-teal-200 group-hover/btn:translate-x-1 transition-transform" aria-hidden="true" />
@@ -110,7 +110,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
         </div>
 
         {/* 4th Service Option: General / Other */}
-        <div className="mt-8 bg-gradient-to-r from-slate-900/95 via-[#13283c] to-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-2xl relative overflow-hidden">
+        <div className="mt-8 bg-[#152B40] rounded-3xl border border-slate-700/80 p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-xl relative overflow-hidden">
           <div className="flex items-start sm:items-center gap-4">
             {getIcon('other')}
             <div>
@@ -124,7 +124,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
             type="button"
             onClick={() => onSelectService('other')}
             aria-label="Request custom or other plumbing service"
-            className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm rounded-xl border-2 border-teal-400/50 hover:border-teal-400 shadow-md hover:shadow-teal-900/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright min-h-[46px] shrink-0 cursor-pointer w-full sm:w-auto"
+            className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#102A43] hover:bg-[#152B40] text-white font-bold text-sm rounded-xl border border-teal-400/50 hover:border-teal-400 shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright min-h-[46px] shrink-0 cursor-pointer w-full sm:w-auto"
           >
             <span>Request other service</span>
             <ArrowRight className="w-4 h-4 text-teal-300 group-hover:translate-x-1 transition-transform" aria-hidden="true" />

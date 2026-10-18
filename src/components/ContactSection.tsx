@@ -9,7 +9,7 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
   return (
     <section
       id="contact"
-      className="py-14 sm:py-20 bg-brand-darkblue border-b border-slate-800 relative"
+      className="py-14 sm:py-20 bg-[#1B3448] border-b border-slate-700/70 relative"
       aria-labelledby="contact-heading"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -31,14 +31,14 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
 
             {/* Clearly Labelled Sample Contact Cards: Elevated panels with glowing icon badges */}
             <div className="space-y-4 mb-8">
-              <div className="group p-5 rounded-2xl border-2 border-slate-700/90 bg-slate-900/95 flex items-start gap-4 shadow-xl hover:border-teal-400/50 transition-all duration-200 hover:-translate-y-0.5">
-                <div className="w-12 h-12 rounded-2xl bg-teal-950/90 text-brand-teal-bright border-2 border-teal-400/50 flex items-center justify-center shrink-0 shadow-lg shadow-teal-950/50 group-hover:scale-105 transition-transform">
+              <div className="group p-5 rounded-2xl border border-slate-700/80 bg-[#152B40] hover:bg-[#183149] flex items-start gap-4 shadow-md hover:border-teal-400/50 transition-all duration-200 hover:-translate-y-0.5">
+                <div className="w-12 h-12 rounded-2xl bg-teal-950/90 text-brand-teal-bright border border-teal-400/50 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                   <Phone className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-bold text-white">Sample Phone Line</span>
-                    <span className="text-[10px] font-bold text-amber-300 bg-amber-950/80 border border-amber-600/70 px-2 py-0.5 rounded-md shadow-xs">
+                    <span className="text-[10px] font-bold text-amber-300 bg-amber-950/80 border border-amber-500/70 px-2 py-0.5 rounded-md shadow-xs">
                       Demo Placeholder
                     </span>
                   </div>
@@ -49,14 +49,14 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
                 </div>
               </div>
 
-              <div className="group p-5 rounded-2xl border-2 border-slate-700/90 bg-slate-900/95 flex items-start gap-4 shadow-xl hover:border-teal-400/50 transition-all duration-200 hover:-translate-y-0.5">
-                <div className="w-12 h-12 rounded-2xl bg-teal-950/90 text-brand-teal-bright border-2 border-teal-400/50 flex items-center justify-center shrink-0 shadow-lg shadow-teal-950/50 group-hover:scale-105 transition-transform">
+              <div className="group p-5 rounded-2xl border border-slate-700/80 bg-[#152B40] hover:bg-[#183149] flex items-start gap-4 shadow-md hover:border-teal-400/50 transition-all duration-200 hover:-translate-y-0.5">
+                <div className="w-12 h-12 rounded-2xl bg-teal-950/90 text-brand-teal-bright border border-teal-400/50 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                   <Mail className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-bold text-white">Sample Inquiries Inbox</span>
-                    <span className="text-[10px] font-bold text-amber-300 bg-amber-950/80 border border-amber-600/70 px-2 py-0.5 rounded-md shadow-xs">
+                    <span className="text-[10px] font-bold text-amber-300 bg-amber-950/80 border border-amber-500/70 px-2 py-0.5 rounded-md shadow-xs">
                       Demo Placeholder
                     </span>
                   </div>
@@ -69,8 +69,8 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
                 </div>
               </div>
 
-              <div className="group p-5 rounded-2xl border-2 border-slate-700/90 bg-slate-900/95 flex items-start gap-4 shadow-xl hover:border-teal-400/50 transition-all duration-200 hover:-translate-y-0.5">
-                <div className="w-12 h-12 rounded-2xl bg-teal-950/90 text-brand-teal-bright border-2 border-teal-400/50 flex items-center justify-center shrink-0 shadow-lg shadow-teal-950/50 group-hover:scale-105 transition-transform">
+              <div className="group p-5 rounded-2xl border border-slate-700/80 bg-[#152B40] hover:bg-[#183149] flex items-start gap-4 shadow-md hover:border-teal-400/50 transition-all duration-200 hover:-translate-y-0.5">
+                <div className="w-12 h-12 rounded-2xl bg-teal-950/90 text-brand-teal-bright border border-teal-400/50 flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                   <Clock className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
@@ -87,7 +87,7 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
               <button
                 type="button"
                 onClick={onRequestClick}
-                className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-bold text-base rounded-2xl shadow-xl shadow-teal-950/80 hover:shadow-teal-500/30 hover:shadow-2xl border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright min-h-[50px] cursor-pointer"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-500 via-teal-600 to-teal-500 hover:from-teal-400 hover:via-teal-500 hover:to-teal-400 active:from-teal-700 active:to-teal-600 text-white font-bold text-base rounded-2xl shadow-lg shadow-teal-950/80 hover:shadow-teal-500/30 hover:shadow-xl border border-teal-300/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal-bright min-h-[50px] cursor-pointer"
               >
                 <span>Open Service Request Form</span>
                 <ArrowRight className="w-5 h-5 text-teal-200 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
@@ -96,7 +96,7 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
           </div>
 
           {/* Right Column: GTA Service Coverage Area */}
-          <div className="bg-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-7 sm:p-9 shadow-2xl relative overflow-hidden">
+          <div className="bg-[#152B40] rounded-3xl border border-slate-700/80 p-7 sm:p-9 shadow-xl relative overflow-hidden">
             {/* Top ambient highlight line */}
             <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/60 to-transparent opacity-60" />
 
@@ -113,14 +113,14 @@ export function ContactSection({ onRequestClick }: ContactSectionProps) {
 
             <ul className="space-y-3 text-xs sm:text-sm">
               {GTA_SERVICE_AREAS.map((area, idx) => (
-                <li key={idx} className="flex items-start gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80 shadow-sm hover:border-teal-400/40 transition-colors">
+                <li key={idx} className="flex items-start gap-3 bg-[#102A43] p-3.5 rounded-xl border border-slate-700/70 shadow-xs hover:border-teal-400/40 transition-colors">
                   <span className="w-2.5 h-2.5 rounded-full bg-brand-teal-bright shrink-0 mt-1.5 shadow-xs" aria-hidden="true" />
                   <span className="text-white font-semibold">{area}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-6 pt-5 border-t border-slate-800 text-xs text-slate-400 leading-relaxed">
+            <div className="mt-6 pt-5 border-t border-slate-700/70 text-xs text-slate-400 leading-relaxed">
               <strong className="text-white">Demo note:</strong> In a production implementation, Google Maps Place Autocomplete or postal code geofencing can be integrated to automatically determine travel fees and dispatch boundaries.
             </div>
           </div>

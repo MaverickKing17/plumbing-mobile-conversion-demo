@@ -165,10 +165,11 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
           )}
         </div>
 
-        {/* Visually Distinct High-Contrast Panel Against Dark Background */}
-        <div className="bg-white rounded-3xl border-2 border-slate-200/90 shadow-2xl shadow-slate-950/50 text-slate-900 overflow-hidden relative">
-          {/* Top Decorative Brand Gradient Bar */}
-          <div className="h-2 w-full bg-gradient-to-r from-teal-500 via-teal-400 to-amber-400" />
+        {/* Visually Distinct Elevated Panel with Softened Blue-Gray Transition Rim */}
+        <div className="bg-[#152B40]/80 p-2 sm:p-3 rounded-[2rem] border border-slate-700/80 shadow-2xl shadow-slate-950/60">
+          <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm text-[#102A43] overflow-hidden relative">
+            {/* Top Decorative Brand Gradient Bar */}
+            <div className="h-1.5 w-full bg-gradient-to-r from-teal-600 via-teal-400 to-amber-400" />
 
           <div className="p-5 sm:p-8 md:p-10">
             {isSubmitted ? (
@@ -324,6 +325,7 @@ export function ServiceRequestWizard({ initialService, onReturnHome }: ServiceRe
           </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }

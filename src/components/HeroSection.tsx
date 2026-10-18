@@ -58,20 +58,20 @@ export function HeroSection({ onRequestService, onExploreServices }: HeroSection
 
             {/* Trust and Benefits Strip: Enhanced Value Proposition Cards with luminous accents */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-xs sm:text-sm">
-              <div className="group flex items-center gap-3 bg-slate-900/85 hover:bg-slate-850/90 border-2 border-slate-700/80 hover:border-teal-400/50 rounded-2xl p-3.5 text-slate-100 shadow-xl transition-all duration-200 hover:-translate-y-0.5">
-                <span className="w-8 h-8 rounded-xl bg-teal-950/90 border border-teal-400/40 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+              <div className="group flex items-center gap-3 bg-[#152B40] hover:bg-[#183149] border border-slate-700/80 hover:border-teal-400/50 rounded-2xl p-3.5 text-slate-100 shadow-md transition-all duration-200 hover:-translate-y-0.5">
+                <span className="w-8 h-8 rounded-xl bg-teal-950/90 border border-teal-400/40 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
                   <CheckCircle2 className="w-4 h-4 text-brand-teal-bright" aria-hidden="true" />
                 </span>
                 <span className="font-semibold text-white leading-snug">4 clear steps, no hidden questions</span>
               </div>
-              <div className="group flex items-center gap-3 bg-slate-900/85 hover:bg-slate-850/90 border-2 border-slate-700/80 hover:border-teal-400/50 rounded-2xl p-3.5 text-slate-100 shadow-xl transition-all duration-200 hover:-translate-y-0.5">
-                <span className="w-8 h-8 rounded-xl bg-teal-950/90 border border-teal-400/40 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+              <div className="group flex items-center gap-3 bg-[#152B40] hover:bg-[#183149] border border-slate-700/80 hover:border-teal-400/50 rounded-2xl p-3.5 text-slate-100 shadow-md transition-all duration-200 hover:-translate-y-0.5">
+                <span className="w-8 h-8 rounded-xl bg-teal-950/90 border border-teal-400/40 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
                   <CheckCircle2 className="w-4 h-4 text-brand-teal-bright" aria-hidden="true" />
                 </span>
                 <span className="font-semibold text-white leading-snug">In-memory only demo data</span>
               </div>
-              <div className="group flex items-center gap-3 bg-slate-900/85 hover:bg-slate-850/90 border-2 border-slate-700/80 hover:border-teal-400/50 rounded-2xl p-3.5 text-slate-100 shadow-xl transition-all duration-200 hover:-translate-y-0.5">
-                <span className="w-8 h-8 rounded-xl bg-teal-950/90 border border-teal-400/40 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+              <div className="group flex items-center gap-3 bg-[#152B40] hover:bg-[#183149] border border-slate-700/80 hover:border-teal-400/50 rounded-2xl p-3.5 text-slate-100 shadow-md transition-all duration-200 hover:-translate-y-0.5">
+                <span className="w-8 h-8 rounded-xl bg-teal-950/90 border border-teal-400/40 text-brand-teal-bright flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
                   <ShieldCheck className="w-4 h-4 text-brand-teal-bright" aria-hidden="true" />
                 </span>
                 <span className="font-semibold text-white leading-snug">Accessible &amp; mobile-first</span>
@@ -81,12 +81,12 @@ export function HeroSection({ onRequestService, onExploreServices }: HeroSection
 
           {/* Right Column: Visual Plumbing Showcase Panel */}
           <div className="lg:col-span-5 hidden sm:block">
-            <div className="bg-slate-900/95 rounded-3xl border-2 border-slate-700/90 p-6 sm:p-7 shadow-2xl relative overflow-hidden backdrop-blur-md">
+            <div className="bg-[#152B40] rounded-3xl border border-slate-700/80 p-6 sm:p-7 shadow-2xl relative overflow-hidden backdrop-blur-md">
               {/* Decorative top ambient glow line */}
               <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-teal-400/60 to-transparent" />
 
               {/* Header badge */}
-              <div className="flex items-center justify-between gap-2 mb-5 pb-4 border-b border-slate-800">
+              <div className="flex items-center justify-between gap-2 mb-5 pb-4 border-b border-slate-700/70">
                 <div className="flex items-center gap-2.5">
                   <span className="p-2 rounded-xl bg-teal-950/90 border border-teal-400/40 text-brand-teal-bright shadow-inner">
                     <Sparkles className="w-4 h-4" aria-hidden="true" />
@@ -100,7 +100,7 @@ export function HeroSection({ onRequestService, onExploreServices }: HeroSection
                 </div>
 
                 {/* Amber status accent */}
-                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/80 border border-amber-600/70 text-amber-300 text-[11px] font-bold shadow-sm">
+                <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/80 border border-amber-500/70 text-amber-300 text-[11px] font-bold shadow-xs">
                   <span className="w-2 h-2 rounded-full bg-brand-amber animate-pulse" aria-hidden="true" />
                   <span>Demo Mode</span>
                 </div>
@@ -108,39 +108,39 @@ export function HeroSection({ onRequestService, onExploreServices }: HeroSection
 
               {/* Metric bar */}
               <div className="grid grid-cols-2 gap-3.5 mb-5">
-                <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/90 shadow-sm">
+                <div className="p-4 rounded-2xl bg-[#102A43] border border-slate-700/70 shadow-xs">
                   <div className="flex items-center gap-1.5 text-xs text-brand-teal-bright font-medium mb-1">
                     <Clock className="w-3.5 h-3.5 text-brand-teal-bright" />
                     <span>Average Intake</span>
                   </div>
-                  <p className="text-xl font-black text-white">&lt; 2 Minutes</p>
+                  <p className="text-xl font-bold text-white">&lt; 2 Minutes</p>
                 </div>
-                <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/90 shadow-sm">
+                <div className="p-4 rounded-2xl bg-[#102A43] border border-slate-700/70 shadow-xs">
                   <div className="flex items-center gap-1.5 text-xs text-brand-teal-bright font-medium mb-1">
                     <Gauge className="w-3.5 h-3.5 text-brand-teal-bright" />
                     <span>Clarity Score</span>
                   </div>
-                  <p className="text-xl font-black text-white">100% WCAG AA</p>
+                  <p className="text-xl font-bold text-white">100% WCAG AA</p>
                 </div>
               </div>
 
               {/* Visual Workflow Steps */}
               <div className="space-y-2.5 text-xs">
-                <div className="p-3.5 rounded-xl bg-slate-800/70 border border-slate-700/70 flex items-center justify-between">
+                <div className="p-3.5 rounded-xl bg-[#102A43]/80 border border-slate-700/70 flex items-center justify-between">
                   <span className="font-semibold text-slate-100">1. Problem Diagnosis</span>
                   <span className="text-brand-teal-bright font-bold">Pre-selected</span>
                 </div>
-                <div className="p-3.5 rounded-xl bg-slate-800/70 border border-slate-700/70 flex items-center justify-between">
+                <div className="p-3.5 rounded-xl bg-[#102A43]/80 border border-slate-700/70 flex items-center justify-between">
                   <span className="font-semibold text-slate-100">2. GTA Municipality</span>
                   <span className="text-brand-teal-bright font-bold">1-Tap Location</span>
                 </div>
-                <div className="p-3.5 rounded-xl bg-slate-800/70 border border-slate-700/70 flex items-center justify-between">
+                <div className="p-3.5 rounded-xl bg-[#102A43]/80 border border-slate-700/70 flex items-center justify-between">
                   <span className="font-semibold text-slate-100">3. Contact Preference</span>
                   <span className="text-brand-teal-bright font-bold">Phone or Email</span>
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-brand-muted">
+              <div className="mt-6 pt-4 border-t border-slate-700/70 flex items-center justify-between text-xs text-brand-muted">
                 <span className="text-slate-400">Toronto &amp; Greater Area</span>
                 <button
                   type="button"
